@@ -71,10 +71,18 @@ I --> J{{"b =", b}}
 #### Pseudocódigo (1 ponto)
 
 ```
-Algoritmo TrocaValores
-INICIO
-...
-FIM
+ALGORITMO TrocarValores
+1. DECLARE a, b, aux: INTEIRO
+2. INICIO3.   ESCREVA "Digite o valor da a: "
+4.   LEIA a
+5.   ESCREVA "Digite o valor da b: "
+6.   LEIA b
+7.   aux ← a
+8.   a ← b
+9.   b ← aux
+10.  ESCREVA "a =", a
+11.  ESCREVA "b =", b
+12. FIM_ALGORITMO
 ```
 
 #### Teste de mesa
@@ -82,6 +90,7 @@ FIM
 | a  | b  | aux | a  | b  | saída 1 | saída 2 | 
 | -- | -- | --  | -- | -- | --      | --      | 
 | 0  | 1  | 0   | 1  | 0  | a = 1   | b = 0   |
+
 
 ### Questão 2 - Contagem (1 ponto)
 
@@ -141,28 +150,43 @@ J --LOOP--> E
 
 ```
 Algoritmo ContaAprovacoes
-INICIO
-...
-FIM
+1  ALGORITMO ContarAprovados
+2  DECLARE n, nota, cont, i: INTEIRO
+3  INICIO
+4    ESCREVA "Digite o número de alunos: "
+5    LEIA n
+6    cont ← 0
+7    i ← 1
+8    ENQUANTO i <= n FAÇA
+9      ESCREVA "Digite a nota do aluno ", i, ": "
+10     LEIA nota
+11     SE nota >= 50 E nota <= 100 ENTÃO
+12       cont ← cont + 1
+13     FIM_SE
+14     i ← i + 1
+15   FIM_ENQUANTO
+16   ESCREVA "Número de alunos aprovados: ", cont
+17 FIM_ALGORITMO
 ```
+
 
 #### Teste de mesa 01
 Teste de mesa referente ao algoritmo usando o loop ENQUANTO.
 
 | it | n  | i  | cont | i<=n  | nota, i | nota | nota_valida | cont+1 | i+1 | saída        | 
 | -- | -- | -- | --   | --    | --      | --   | --          | --     | --  | --           |
-| 1  | 3  | 1  |  0   | True  | nota 1  | 60   | True        | 1      | 2   |              |
-| 2  | 3  | 2  |  1   | True  | nota 2  | 40   | False       | 1      | 3   |              |
-| 3  | 3  | 3  |  1   | True  | nota 3  | 90   | True        | 2      | 4   |              |
-| 4  | 3  | 4  |  2   | False |         |      |             |        |     | Aprovados: 2 |
-
+| 1  | 3  | 1  |  0   | True  | nota 1  | 60   | True        | 1      | 2   | Aprovados: 1 |
+| 2  | 3  | 2  |  1   | True  | nota 2  | 40   | False       | 1      | 3   | Aprovados: 0 |
+| 3  | 3  | 3  |  1   | True  | nota 3  | 90   | True        | 2      | 4   | Aprovados: 1 |
+| 4  | 3  | 4  |  2   | False | nota 4  | 50   | True        | 3      | 5   | Aprovados: 2 |
+Você enviou
 #### Teste de mesa 02
 Teste de mesa referente ao algoritmo usando o loop PARA.
 
 | it | n  | cont | i  | nota, i | nota | nota_valida | cont+1 | saída        | 
 | -- | -- | --   | -- | --      | --   | --          | --     | --           |
-| 1  | 3  | 0    | 1  | nota 1  | 60   | True        | 1      |              |
-| 2  | 3  | 1    | 2  | nota 2  | 40   | False       | 1      |              |
+| 1  | 3  | 0    | 1  | nota 1  | 60   | True        | 1      | Aprovados: 1 |
+| 2  | 3  | 1    | 2  | nota 2  | 40   | False       | 1      | Aprovados: 0 |
 | 3  | 3  | 1    | 3  | nota 3  | 90   | True        | 2      | Aprovados: 2 |
 
 ### Questão 3 - Soma de um conjunto de números (1 ponto)
@@ -203,10 +227,25 @@ K --LOOP--> G
 #### Pseudocódigo (1 ponto)
 
 ```
-Algoritmo SomaNumeros
-INICIO
-...
-FIM
+
+ALGORITMO CalcularSoma
+1. DECLARE n, soma, i, num: INTEIRO
+2. INICIO3.   ESCREVA "Digite a quantidade de números (n >= 0): "
+4.   LEIA n
+5.   SE n < 0 ENTÃO
+6.     ESCREVA "O valor deve ser maior ou igual a zero!"
+7.   SENÃO
+8.     soma ← 0
+9.     i ← 1
+10.    ENQUANTO i <= n FAÇA
+11.      ESCREVA "Digite um número: "
+12.      LEIA num
+13.      soma ← soma + num
+14.      i ← i + 1
+15.    FIM_ENQUANTO
+16.    ESCREVA "A soma dos números é ", soma
+17.   FIM_SE
+18. FIM_ALGORITMO
 ```
 
 #### Teste de mesa
@@ -215,10 +254,11 @@ FIM
 | -- | -- | --     | --   | -- | --     | --  | --           | --                      |
 |    | -3 | False  |      |    |        |     |              | O valor deve ser ...    |
 | 1  | 0  | True   | 0    | 1  | False  |     |              | A soma dos números é 0  |
-| 1  | 3  | True   | 0    | 1  | True   | 5   | 0 + 5 = 5    |                         |
-| 2  | 3  | True   | 5    | 2  | True   | 10  | 5 + 10 = 15  |                         |
-| 3  | 3  | True   | 15   | 3  | True   | 20  | 15 + 20 = 35 |                         |
-| 4  | 3  | True   | 35   | 4  | False  |     |              | A soma dos números é 35 |
+| 1  | 3  | True   | 0    | 1  | True   | 5   | 0 + 5 = 5    | A soma dos números é 0  |
+| 2  | 3  | True   | 5    | 2  | True   | 10  | 5 + 10 = 15  | A soma dos números é 5  |
+| 3  | 3  | True   | 15   | 3  | True   | 20  | 15 + 20 = 35 | A soma dos números é 15 |
+| 4  | 3  | True   | 35   | 4  | False  |  0  | 35 + 0 = 35  | A soma dos números é 35 |
+
 
 ### Questão 4 - Cálculo de uma série (1 ponto)
 
@@ -257,10 +297,19 @@ I --LOOP--> E
 #### Pseudocódigo (1 ponto)
 
 ```
-Algoritmo SomaSerie
-INICIO
-...
-FIM
+ALGORITMO CalcularSerieS
+1. DECLARE n, S, numerador, denominador, termo, i: INTEIRO
+2. INICIO3.   ESCREVA "Digite o número de termos da série S: "
+4.   LEIA n
+5.   S ← 0
+6.   PARA i DE 0 ATÉ n PASSO 1 FAÇA
+7.     numerador ← 2 * i + 1
+8.     denominador ← 2 * i + 2
+9.     termo ← numerador / denominador
+10.    S ← S + termo
+11.  FIM_PARA
+12.  ESCREVA "Soma da série S é ", S
+13. FIM_ALGORITMO
 ```
 
 #### Teste de mesa (0.25 ponto)
@@ -268,9 +317,9 @@ FIM
 | it | n  | S  | i | numerador | denominador | termo | S += termo     | saída                  |
 | -- | -- | -- |-- | --        | --          | --    | --             | --                     |
 |    | 0  | 0  |   |           |             |       |                |                        |
-| 1  | 4  | 0  | 0 | 2*0+1 = 1 | 2*0+2 = 2   | 1/2   | 0+1/2 = 1/2    |                        |
-| 2  | 4  | 0  | 1 | 2*1+1 = 1 | 2*1+2 = 2   | 3/4   | 1/2+3/4 = 1.25 |                        |
-| 3  | 4  | 0  | 2 | 2*2+1 = 1 | 2*2+2 = 2   | 5/6   | 0+1/2 = 2.08   |                        |
+| 1  | 4  | 0  | 0 | 2*0+1 = 1 | 2*0+2 = 2   | 1/2   | 0+1/2 = 1/2    | Soma da série S é 1/2  |
+| 2  | 4  | 0  | 1 | 2*1+1 = 1 | 2*1+2 = 2   | 3/4   | 1/2+3/4 = 1.25 | Soma da série S é 1.25 |
+| 3  | 4  | 0  | 2 | 2*2+1 = 1 | 2*2+2 = 2   | 5/6   | 0+1/2 = 2.08   | Soma da série S é 2.08 |
 | 4  | 4  | 0  | 3 | 2*3+1 = 1 | 2*3+2 = 2   | 7/8   | 0+1/2 = 2.96   | Soma da série S é 2.96 |
 
 ### Questão 5 - Cálculo fatorial (2 pontos)
@@ -305,18 +354,30 @@ H --> I
 #### Pseudocódigo (2 pontos)
 
 ```
-Algoritmo CalcFatorial
-INICIO
-...
-FIM
+ALGORITMO CalcularFatorial
+1. DECLARE n, fator, i: INTEIRO
+2. INICIO3.   ESCREVA "Digite um número inteiro não-negativo:"
+4.   LEIA n
+5.   SE n >= 0 ENTÃO
+6.     fator ← 1
+7.     PARA i DE 1 ATÉ n PASSO 1 FAÇA
+8.       fator ← fator * i
+9.     FIM_PARA
+10.    ESCREVA "O fatorial de ", n, " é: ", fator
+11.  SENÃO
+12.    ESCREVA "O valor deve ser maior ou igual a zero!"
+13.  FIM_SE
+14. FIM_ALGORITMO
 ```
+
+
 
 #### Teste de mesa
 
 | n  | fator | i  | fator = fator * i | saída               |
 | -- | --    | -- | --                | --                  |
-| 3  | 1     | 1  | 1*1 = 1           |                     |
-| 3  | 1     | 2  | 1*2 = 2           |                     |
+| 3  | 1     | 1  | 1*1 = 1           | O fatorial de 1 é 1 |
+| 3  | 1     | 2  | 1*2 = 2           | O fatorial de 2 é 2 |
 | 3  | 2     | 3  | 2*3 = 6           | O fatorial de 3 é 6 |
 
 ### Questão 6 - Geração da sequência de Fibonacci (2 pontos)
@@ -353,10 +414,20 @@ I --LOOP--> E
 #### Pseudocódigo (2 pontos)
 
 ```
-Algoritmo GeraFibonacci
-INICIO
-...
-FIM
+ALGORITMO SerieFibonacci
+1. DECLARE n, a, b, termo_atual, i: INTEIRO
+2. INICIO3.   ESCREVA "Número de termos da série Fibonacci: "
+4.   LEIA n
+5.   a ← 0
+6.   b ← 1
+7.   PARA i DE 1 ATÉ n PASSO 1 FAÇA
+8.     ESCREVA a
+9.     termo_atual ← a + b
+10.    a ← b
+11.    b ← termo_atual
+12. FIM_PARA
+13. ESCREVA "FIM"
+14. FIM_ALGORITMO
 ```
 #### Teste de mesa
 
@@ -404,10 +475,26 @@ E --> W
 #### Pseudocódigo (2 pontos)
 
 ```
-Algoritmo InverteInteiro
-INICIO
-...
-FIM
+ALGORITMO InverterNumero
+1. DECLARE num, num_inv, digito: INTEIRO
+2. INICIO3.   ESCREVA "Digite um número inteiro: "
+4.   LEIA num
+5.   SE num >= 0 ENTÃO
+6.     num_inv ← 0
+7.     SE num > 0 ENTÃO
+8.       ENQUANTO num > 0 FAÇA
+9.         digito ← num % 10
+10.        num_inv ← num_inv * 10 + digito
+11.        num ← num // 10
+12.      FIM_ENQUANTO
+13.    SENÃO
+14.      ESCREVA "O número deve ser positivo!"
+15.    FIM_SE
+16.    ESCREVA "Número invertido:", num_inv
+17.  SENÃO
+18.    ESCREVA "O número deve ser não-negativo!"
+19.  FIM_SE
+20. FIM_ALGORITMO
 ```
 
 #### Teste de mesa
