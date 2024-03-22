@@ -150,7 +150,18 @@ Por exemplo, para a sequência {12, 17, 4, -6, 8, 0}, o seu programa deve escrev
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{"Digite a quantidade de números:"}}
+B --> C[\n\]
+C --> D[i = 1]
+D --> E[soma = 0]
+E --> F{i <= n}
+F --FALSE--> G{{A soma dos número é, soma}}
+G --> L([FIM])
+F --TRUE--> H{{Digite o número, i,:}}
+H --> I[\num\]
+I --> J[soma = soma + num]
+J --> K[i = i + 1]
+K --LOOP--> F
 ```
 
 #### Pseudocódigo (1.0 ponto)
