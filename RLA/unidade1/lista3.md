@@ -146,7 +146,7 @@ FIM_ALGORITMO
 Dada uma sequência de números inteiros, calcular a sua soma. 
 Por exemplo, para a sequência {12, 17, 4, -6, 8, 0}, o seu programa deve escrever o número 35.
 
-#### Fluxograma (1.0 ponto)
+#### Fluxograma 1
 
 ```mermaid
 flowchart TD
@@ -162,6 +162,21 @@ H --> I[\num\]
 I --> J[soma = soma + num]
 J --> K[i = i + 1]
 K --LOOP--> F
+```
+
+#### Fluxograma 2
+```mermaid
+flowchart TD
+A([INICIO]) --> B{{"Digite a quantidade de números:"}}
+B --> C[\n\]
+C --> D[soma = 0]
+D --> E[[i=1 ATE n, PASSO 1]]
+E --FALSE--> F{{A soma dos número é, soma}}
+F --> L([FIM])
+E --TRUE--> G{{Digite o número, i,:}}
+G --> H[\num\]
+H --> I[soma = soma + num]
+I --LOOP--> E
 ```
 
 #### Pseudocódigo (1.0 ponto)
