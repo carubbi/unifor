@@ -395,7 +395,7 @@ H --FALSE--> Z{{"Número invertido:", numero_inv}}
 Z --> W([FIM])
 H --TRUE--> I[digito = num % 10]
 I --> J[num_inv = num_inv * 10 + digito]
-J --> K[numero = numero // 10]
+J --> K[num = num // 10]
 K --LOOP--> H
 D --FALSE--> E{{O número deve ser positivo!}}
 E --> W
