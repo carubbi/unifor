@@ -44,7 +44,7 @@ I --> Z
 13 FIM
 ```
 
-#### Teste de mesa (0,25 ponto)
+#### Tabela de testes (0,25 ponto)
 | numero | numero >= 0 | resto | resto == 0 | Saída |
 | -- | -- | -- | -- | -- | 
 | -1 | F |   |   | "O número deve ser postivo!" |
@@ -60,22 +60,38 @@ Sabe-se que os funcionários que recebem atualmente salário de até R$ 500 ter�
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{"Digite seu salário atual:"}}
+B --> C[/sal_atual/]
+C --> D{sal_atual <= 500}
+D --FALSE--> E[sal_reaj = sal_atual * 1.1]
+D --TRUE--> F[sal_reaj = sal_atual * 1.2]
+E --> G{{O novo salário é, sal_reaj}}
+F --> G
+G --> H([FIM])
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
 ```java
-Algoritmo ContaAprovacoes
+ALGORTIMO ReajusteSalario
+DECLARE sal_atual, sal_reaj: REAL
+ESCREVA "Digite seu salário atual:"
+LEIA sal_atual
+SE sal_atual <= 500 ENTAO
+  sal_reaj = sal_atual * 1.2
+SENAO
+  sal_reaj = sal_atual * 1.1
+ESCREVA "O novo salário é R$", sal_reaj
 FIM_ALGORITMO
 ```
 
-#### Teste de mesa (1.0 ponto)
+#### Tabela de testes (1.0 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| sal_atual | sal_atual >= 500 |sal_reaj       | saída                   | 
+| --        | --               | --            | --                      | 
+| 400       | False            | 400*1.2 = 480 | O novo salário é R$ 480 |
+| 500       | True             | 500*1.2 = 600 | O novo salário é R$ 600 |
+| 600       | True             | 600*1.1 = 660 | O novo salário é R$ 660 |
 
 ## Exercício 03 (3 pontos)
 Represente, em fluxograma e pseudocódigo, um algoritmo para calcular a média aritmética entre duas notas de um aluno e mostrar sua situação, que pode ser aprovado ou reprovado.
@@ -94,7 +110,7 @@ Algoritmo ContaAprovacoes
 FIM_ALGORITMO
 ```
 
-#### Teste de mesa (1 ponto)
+#### Tabela de testes (1 ponto)
 
 | nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
 |      --      |      --      |      --      |      --      |      --      | 
@@ -119,7 +135,7 @@ Algoritmo ContaAprovacoes
 FIM_ALGORITMO
 ```
 
-#### Teste de mesa (1.0 ponto)
+#### Tabela de testes (1.0 ponto)
 
 | nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
 |      --      |      --      |      --      |      --      |      --      | 
