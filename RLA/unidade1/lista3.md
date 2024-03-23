@@ -101,7 +101,18 @@ Atualize o algoritmo para determinar se um número inteiro e positivo é par ou 
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{Digite um número:}}
+B --> C[\num\]
+C --> D{num < 0}
+D --FALSE--> E[resto = num % 2]
+E --> H{resto == 0}
+H --FALSE--> I{{O número é impar!}}
+H --TRUE--> J{{O número é par!}}
+I --> Z([FIM])
+J --> Z
+D --TRUE--> F{{Digite um número maior ou igual a zero:}}
+F --> G[/num/]
+G --LOOP--> D
 ```
 
 #### Pseudocódigo (1.0 ponto)
@@ -113,10 +124,11 @@ FIM_ALGORITMO
 
 #### Tabela de testes (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| num | num < 0 | num | resto | resto == 0 | saída             | 
+| --  | --      | --  | --    | --         | --                | 
+| -1  | True    | 0   | 0     | True       | O número é par!   |
+| 1   | False   |     | 1     | False      | O número é impar! |
+| 2   | False   |     | 0     | True       | O número é par!   |
 
 ### Exercício 02 (2.5 pontos)
 Faça um algoritmo que exiba na tela uma contagem de 0 até 30, exibindo apenas os múltiplos de 3.
