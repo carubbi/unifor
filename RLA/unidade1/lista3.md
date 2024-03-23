@@ -161,8 +161,13 @@ F --LOOP--> E
 
 #### Pseudocódigo (1.0 ponto)
 
-```
-Algoritmo ClassificaCategoria
+```java
+ALGORTIMO MultiploTres
+DECLARE n: INTEIRO
+ESCREVA "Digite a quantidade de números:"
+LEIA n
+PARA i DE 1 ATÉ n PASSO 1 FAÇA
+  ESCREVA i
 FIM_ALGORITMO
 ```
 
