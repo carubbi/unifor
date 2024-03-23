@@ -72,7 +72,7 @@ F --LOOP--> E
 5  LEIA n		// variável de entrada n
 7  soma ← 0		// variável soma inicializada
 6  PARA i DE 1 ATÉ n PASSO 1 FAÇA
-7	soma ← soma + i	// soma =+ i (incremento)
+7	   soma ← soma + i	// soma =+ i (incremento)
 8  FIM_PARA
 9  ESCREVA “A soma é igual a ”, soma
 10 FIM
@@ -124,7 +124,7 @@ G --LOOP--> D
 4  INICIO
 4  LEIA numero
 5  SE numero >= 0 ENTAO                  // verifica se o inteiro é positivo
-6    resto = numero % 2                 // calcula o resto da divisão por 2
+6    resto ← numero % 2                 // calcula o resto da divisão por 2
 7    SE resto == 0 ENTAO                // verifica se o resto é igual a zero
 8      ESCREVA "O número é par!"
 9    SENAO
@@ -132,7 +132,7 @@ G --LOOP--> D
 11   FIM_SE
 11  SENAO                                // caso inteiro for negativo (condição linha 5)
 12    ESCREVA "O número deve ser postivo!"
-13  FIM_SE
+13 FIM_SE
 13 FIM
 ```
 
@@ -153,7 +153,7 @@ Faça um algoritmo que exiba na tela uma contagem de 0 até 30, exibindo apenas 
 flowchart TD
 A([INICIO]) --> B{{Digite a quantidade de números: }}
 B --> C[\n\]
-C --> E[[i=1 ATÉ n PASSO 3]]
+C --> E[[i=0 ATÉ n-1 PASSO 3]]
 E --> G([FIM])
 E --> F{{ESCREVA i}}
 F --LOOP--> E
@@ -166,17 +166,19 @@ ALGORTIMO MultiploTres
 DECLARE n: INTEIRO
 ESCREVA "Digite a quantidade de números:"
 LEIA n
-PARA i DE 1 ATÉ n PASSO 1 FAÇA
+PARA i DE 0 ATÉ n-1 PASSO 3 FAÇA
   ESCREVA i
+FIM_PARA
 FIM_ALGORITMO
 ```
 
 #### Tabela de testes (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| it | n   | i  | saida | 
+| -- | --  | -- | --    |    
+| 1  | 7   | 0  | 0     |
+| 2  | 7   | 3  | 3     |
+| 3  | 7   | 6  | 6     |
 
 ### Exercício 03 (2.5 pontos)
 Dada uma sequência de números inteiros, calcular a sua soma. 
@@ -217,17 +219,33 @@ I --LOOP--> E
 
 #### Pseudocódigo (1.0 ponto)
 
-```
-Algoritmo ClassificaCategoria
+```java
+ALGORITMO SomaValores
+DECLARE n,i: INTEIRO; soma,num: REAL
+ESCREVA "Digite a quantidade de números:"
+LEIA n
+soma <- 0
+i <- 1
+ENQUANTO i <= n FAÇA
+  ESCREVA "Digite o número", i,":"
+  LEIA num
+  soma <- soma + num
+  i <- i + 1
+FIM_ENQUANTO
+ESCREVA "A soma dos número é", soma
 FIM_ALGORITMO
 ```
 
 #### Tabela de testes (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| n  | soma | i  | i <= n | num | soma + num | i + 1   | saída                      |  
+| -- | --   | -- | --     | --  | --         | --      | --                         |
+| -1 | 0    | 1  | False  |     |            |         | A soma dos número é 0      |
+| 0  | 0    | 1  | False  |     |            |         | A soma dos número é 0      |
+| 3  | 0    | 1  | True   | 10  | 0+10 = 10  | 1+1 = 2 |                            |
+| 3  | 10   | 2  | True   | 20  | 10+20 = 30 | 2+1 = 3 |                            |
+| 3  | 30   | 3  | True   | 30  | 30+30 = 60 | 3+1 = 4 |                            |
+| 3  | 60   | 4  | False  |     |            |         | A soma dos número é 60     |
 
 ### Exercício 04 (2.5 pontos)
 Escreva um programa que leia a nota de diversos alunos, até que seja digitada uma nota negativa. 
@@ -256,7 +274,7 @@ J --LOOP--> E
 
 #### Pseudocódigo
 
-```
+```java
 1  ALGORTIMO QuantMedia
 2  DECLARE quant: INT; soma, nota, media: REAL
 3  soma <- 0
