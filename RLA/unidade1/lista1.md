@@ -100,13 +100,32 @@ Represente, em fluxograma e pseudocódigo, um algoritmo para calcular a média a
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{"Digite a nota 1:"}}
+B --> C[/nota1/]
+C --> D{{"Digite a nota 2:"}}
+D --> E[/nota2/]
+E --> F["media = (nota1 + nota2)/2"]
+F --> G{media >= 7}
+G --FALSE--> H{{"O aluno está reprovado!"}}
+G --TRUE--> I{{"O aluno está aprovado!"}}
+H --> J([FIM])
+I --> J
 ```
 
 #### Pseudocódigo (1 ponto)
 
 ```java
-Algoritmo ContaAprovacoes
+ALGORTIMO SituacaoAluno
+DECLARE nota1, nota2, media: REAL
+ESCREVA "Digite a nota 1:"
+LEIA nota1
+ESCREVA "Digite a nota 2:"
+LEIA nota2
+media =  (nota1 + nota2)/2
+SE media >= 7 ENTAO
+  ESCREVA "O aluno está aprovado!"
+SENAO
+  "O aluno está reprovado!"
 FIM_ALGORITMO
 ```
 
