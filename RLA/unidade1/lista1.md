@@ -25,7 +25,7 @@ I --> Z
 ```
 
 #### Pseudocódigo (0,5 ponto)
-```
+```java
 1  ALGORTIMO verifica_par_impar
 2  DECLARE numero, resto: INTEIRO
 3  ESCREVA "Digite um número: "
@@ -65,7 +65,7 @@ A([INICIO]) --> B([FIM])
 
 #### Pseudocódigo (1.0 ponto)
 
-```
+```java
 Algoritmo ContaAprovacoes
 FIM_ALGORITMO
 ```
@@ -89,7 +89,7 @@ A([INICIO]) --> B([FIM])
 
 #### Pseudocódigo (1 ponto)
 
-```
+```java
 Algoritmo ContaAprovacoes
 FIM_ALGORITMO
 ```
@@ -114,7 +114,7 @@ A([INICIO]) --> B([FIM])
 
 #### Pseudocódigo (1.0 ponto)
 
-```
+```java
 Algoritmo ContaAprovacoes
 FIM_ALGORITMO
 ```
