@@ -19,7 +19,7 @@ G --LOOP--> E
 ```
 
 #### Pseudocódigo
-```
+```java
 1 ALGORITMO print_n_primeiros
 2 DECLARE n, num: INTEIRO
 3 INICIO
@@ -64,7 +64,7 @@ F --LOOP--> E
 ```
 
 #### Pseudocódigo
-```
+```java
 1  ALGORITMO	soma_n_numeros()
 2  DECLARE	n, i, soma: INTEIRO
 3  INICIO
@@ -117,7 +117,7 @@ G --LOOP--> D
 
 #### Pseudocódigo (1.0 ponto)
 
-```
+```java
 Algoritmo ClassificaCategoria
 FIM_ALGORITMO
 ```
