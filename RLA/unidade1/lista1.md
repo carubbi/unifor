@@ -40,7 +40,7 @@ I --> Z
 11   FIM_SE
 11  SENAO                                // caso inteiro for negativo (condição linha 5)
 12    ESCREVA "O número deve ser postivo!"
-13  FIM_SE
+13 FIM_SE
 13 FIM
 ```
 
@@ -81,6 +81,7 @@ SE sal_atual <= 500 ENTAO
   sal_reaj = sal_atual * 1.2
 SENAO
   sal_reaj = sal_atual * 1.1
+FIM_SE
 ESCREVA "O novo salário é R$", sal_reaj
 FIM_ALGORITMO
 ```
@@ -104,12 +105,15 @@ A([INICIO]) --> B{{"Digite a nota 1:"}}
 B --> C[/nota1/]
 C --> D{{"Digite a nota 2:"}}
 D --> E[/nota2/]
-E --> F["media = (nota1 + nota2)/2"]
-F --> G{media >= 7}
-G --FALSE--> H{{"O aluno está reprovado!"}}
-G --TRUE--> I{{"O aluno está aprovado!"}}
-H --> J([FIM])
-I --> J
+E --> F{nota1 >= 0<br> OU <br>nota2 >= 0}  
+F --FALSE--> K{{"A nota deve ser maior que zero!"}}
+K --> L([FIM])
+F --TRUE--> G["media = (nota1 + nota2)/2"]
+G --> H{media >= 7}
+H --FALSE--> I{{"O aluno está reprovado!"}}
+H --TRUE--> J{{"O aluno está aprovado!"}}
+I --> L
+J --> L
 ```
 
 #### Pseudocódigo (1 ponto)
@@ -121,20 +125,27 @@ ESCREVA "Digite a nota 1:"
 LEIA nota1
 ESCREVA "Digite a nota 2:"
 LEIA nota2
-media =  (nota1 + nota2)/2
-SE media >= 7 ENTAO
-  ESCREVA "O aluno está aprovado!"
+SE nota1 >= 0 E nota2 >= 0 ENTAO  // condição para que as notas sejam maiores que zero
+  media =  (nota1 + nota2)/2
+  SE media >= 7 ENTAO
+    ESCREVA "O aluno está aprovado!"
+  SENAO
+    "O aluno está reprovado!"
+  FIM_SE
 SENAO
-  "O aluno está reprovado!"
+  ESCREVA "A nota deve ser maior que zero!"
+FIM_SE
 FIM_ALGORITMO
 ```
 
 #### Tabela de testes (1 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| nota1 | nota2 | nota1 >= 0 E nota2 >= 0 | media        | saĩda | 
+| --    | --    | --                      | --           | --    | 
+| -1    | 0     | False                   |              | A nota deve ser maior que zero! | 
+| 0     | 0     | True                    | (0+0)/2 = 0  | O aluno está reprovado!|
+| 4     | 8     | True                    | (4+8)/2 = 6  | O aluno está reprovado!|
+| 4     | 10    | True                    | (4+10)/2 = 7 | O aluno está aprovado!|
 
 ## Exercício 04 (3 pontos)
 Represente, em fluxograma e pseudocódigo, um algoritmo que, a partir da idade do candidato(a), determinar se pode ou não tirar a CNH. 
