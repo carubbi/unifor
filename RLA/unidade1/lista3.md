@@ -33,7 +33,7 @@ G --LOOP--> E
 9 FIM
 ```
 
-#### Teste de mesa
+#### Tabela de testes
 | it | n  | num | num <= n | Saída      | num =+ 1 |
 | -- | -- | --  | --       | --         | --       |
 | 1  | 10 | 1   | True     | Número 1   | 2        |
@@ -78,7 +78,7 @@ F --LOOP--> E
 10 FIM
 ```
 
-#### Teste de mesa
+#### Tabela de testes
 | it | n  | soma | i  | soma =+ i |
 | -- | -- | --   | -- | --        |
 | 1  | 10 | 0    | 1  | 1         |
@@ -111,7 +111,7 @@ Algoritmo ClassificaCategoria
 FIM_ALGORITMO
 ```
 
-#### Teste de mesa (0.5 ponto)
+#### Tabela de testes (0.5 ponto)
 
 | nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
 |      --      |      --      |      --      |      --      |      --      | 
@@ -135,7 +135,7 @@ Algoritmo ClassificaCategoria
 FIM_ALGORITMO
 ```
 
-#### Teste de mesa (0.5 ponto)
+#### Tabela de testes (0.5 ponto)
 
 | nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
 |      --      |      --      |      --      |      --      |      --      | 
@@ -186,7 +186,7 @@ Algoritmo ClassificaCategoria
 FIM_ALGORITMO
 ```
 
-#### Teste de mesa (0.5 ponto)
+#### Tabela de testes (0.5 ponto)
 
 | nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
 |      --      |      --      |      --      |      --      |      --      | 
@@ -202,8 +202,22 @@ Ex. Foram lidas 14 notas. A média aritmética é 6.75!
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B([soma = 0])
+B --> C[quant = 0]
+C --> D[nota = 0]
+D --> E{nota >= 0}
+E --FALSE--> F{quant > 0}
+F --FALSE--> M([FIM])
+F --TRUE--> K[media = soma / quant]
+K --> L{{Foram lidas, quant, notas. <br>A média aritmética é, media!}}
+L --> M
+E --TRUE--> G{{"Digite a nota do aluno <br>(nota negativa encerra o algortimo): "}}
+G --> H[/nota/]
+H --> I[soma += nota]
+I --> J[quant += 1]
+J --LOOP--> E
 ```
+
 
 #### Pseudocódigo (1.0 ponto)
 
@@ -212,7 +226,7 @@ Algoritmo ClassificaCategoria
 FIM_ALGORITMO
 ```
 
-#### Teste de mesa (0.5 ponto)
+#### Tabela de testes (0.5 ponto)
 
 | nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
 |      --      |      --      |      --      |      --      |      --      | 
