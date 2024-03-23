@@ -125,7 +125,12 @@ Faça um algoritmo que exiba na tela uma contagem de 0 até 30, exibindo apenas 
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{Digite a quantidade de números: }}
+B --> C[\n\]
+C --> E[[i=1 ATÉ n PASSO 3]]
+E --> G([FIM])
+E --> F{{ESCREVA i}}
+F --LOOP--> E
 ```
 
 #### Pseudocódigo (1.0 ponto)
@@ -198,7 +203,7 @@ Escreva um programa que leia a nota de diversos alunos, até que seja digitada u
 Nesse momento, ele mostra a média aritmética de todas as notas lidas e quantas notas foram lidas. 
 Ex. Foram lidas 14 notas. A média aritmética é 6.75!
 
-#### Fluxograma (1.0 ponto)
+#### Fluxograma
 
 ```mermaid
 flowchart TD
@@ -218,17 +223,33 @@ I --> J[quant += 1]
 J --LOOP--> E
 ```
 
-
-#### Pseudocódigo (1.0 ponto)
+#### Pseudocódigo
 
 ```
-Algoritmo ClassificaCategoria
-FIM_ALGORITMO
+1  ALGORTIMO QuantMedia
+2  DECLARE quant: INT; soma, nota, media: REAL
+3  soma <- 0
+4  quant <- 0
+5  nota <- 0
+6  ENQUANTO nota >= 0 FAÇA
+7    ESCREVA "Digite a nota do aluno (nota negativa encerra o algortimo:"
+8    LEIA nota
+9    soma <- soma + nota
+10   quant <- quant + 1
+11 SE quant > 0 ENTAO
+12   media <- soma / quant
+13   ESCREVA "Foram lidas", quant, "notas. A média aritmética é", media, "!"
+14 FIM_ALGORITMO
 ```
 
 #### Tabela de testes (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| it  | soma | quant | nota | nota  | soma + nota | quant + 1 | media    | saída                                         | 
+| --  | --   | --    | --   | --    | --          | --        | --       | --                                            |
+| 1   | 0    | 0     | 0    | 0     | 0           | 0+1=1     | 0/1=0    |                                               |
+| 2   | 0    | 0     | 0    | -1    |             |           |          |                                               |
+| 1   | 0    | 0     | 0    | -1    |             |           |          |                                               |
+| 1   | 0    | 0     | 0    | 40    | 0+40=40     | 0+1=1     |          |                                               |
+| 2   | 0    | 0     | 0    | 60    | 40+60=100   | 1+1=2     |          |                                               |
+| 3   | 0    | 0     | 0    | 20    | 100+20=120  | 2+1=3     |          |                                               |
+| 4   | 0    | 0     | 0    | -1    |             |           | 120/3=40 | Foram lidas 3 notas. A média aritmética é 40! |
