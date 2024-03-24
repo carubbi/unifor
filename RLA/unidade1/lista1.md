@@ -32,7 +32,7 @@ I --> Z
 4  INICIO
 4  LEIA numero
 5  SE numero >= 0 ENTAO                  // verifica se o inteiro é positivo
-6    resto = numero % 2                 // calcula o resto da divisão por 2
+6    resto <- numero % 2                 // calcula o resto da divisão por 2
 7    SE resto == 0 ENTAO                // verifica se o resto é igual a zero
 8      ESCREVA "O número é par!"
 9    SENAO
@@ -155,19 +155,44 @@ Caso não atender a restrição de idade, calcular quantos anos faltam para o ca
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{"Digite a sua idade:"}}
+B --> C[/idade/]
+C --> D{idade < 0}
+D --FALSE--> E{idade >= 18}
+E --FALSE--> F[anos_apto = 18 - idade]
+F --> G{{Faltam, anos_apto, anos para o candidato estar apto!}}
+G --> H([FIM])
+E --TRUE--> I{{"O candidato está apto a tirar a CNH!"}}
+I --> H
+D --TRUE--> J{{"A idade deve ser maior que zero!"}}
+J --> H 
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
 ```java
-Algoritmo ContaAprovacoes
-FIM_ALGORITMO
+1  ALGORTIMO AptoCNH
+2  DECLARE idade, anos_apto: INTEIRO
+3  ESCREVA ""Digite a sua idade:"
+4  LEIA idade
+5  SE idade < 0 ENTAO
+6    ESCREVA "A idade deve ser maior que zero!"
+7  SENAO
+8    SE idade >= 18 ENTAO
+9      ESCREVA "O candidato está apto a tirar a CNH!"
+10   SENAO
+11     anos_apto <- 18 - idade
+12     ESCREVA "Faltam", anos_apto, "ano(s) para o candidato estar apto!"
+13   FIM_SE
+14 FIM_SE
+15 FIM_ALGORITMO
 ```
 
 #### Tabela de testes (1.0 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| idade | idade < 0 | idade >= 18 | anos_apto | saída                                         | 
+| --    | --        | --          | --        | --                                            | 
+| -1    | True      |             |           |                                               |
+| 0     | False     | False       | 18-0 = 18 | Faltam 18 ano(s) para o candidato estar apto! |
+| 17    | False     | False       | 18-17 = 1 | Faltam 1 ano(s) para o candidato estar apto!  |
+| 18    | False     | True        |           | O candidato está apto a tirar a CNH!          |
