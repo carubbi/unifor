@@ -132,22 +132,78 @@ O algoritmo deve retornar o resultado da operação selecionada simulando todas 
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B{{"Operações válidas (+,-,*,/). Digite uma operação:"}}
+A([INICIO]) --> B{{"Operações válidas: 1(soma), 2(subtração), 3(multiplicação) e 4(divisão)"}}
+B --> C{{"Digite uma operação:"}}
+C --> D[/op/]
+D --> E{{"Digite um número:"}}
+E --> F[/num1/]
+F --> G{{Digite outro número:}}
+G --> H[/num2/]
+H --> I{op == 1}
+I --FALSE--> J{op == 2}
+J --FALSE--> L{op == 3}
+L --FALSE--> O{op == 4}
+O --FALSE--> Q{{Operação inválida!}}
+Q --> R([FIM])
+I --TRUE--> M[res = num1 + num2]
+J --TRUE--> K[res = num1 - num2]
+L --TRUE--> N[res = num1 * num2]
+O --TRUE-->P{num2 != 0}
+P --FALSE--> X{{Impossível dividir!}}
+P --TRUE--> T[res = num1 / num2]
+T --> U{{num1, op, num2 = res}}
+U --> R
+X --> R
+M --> U
+K --> U
+N --> U
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
-```
-Algoritmo Calculadora
-FIM_ALGORITMO
+```java
+ALGORITMO SimplesCalculadora
+DECLARE op: INTEIRO; num1,num2: REAL
+INICIO
+ESCREVA "Operações válidas: 1(soma), 2(subtração), 3(multiplicação) e 4(divisão)"
+ESCREVA "Digite uma operação:"
+LEIA op
+ESCREVA "Digite um número:"
+LEIA num1
+ESCREVA "Digite outro número:"
+LEIA num2
+ESCOLHA
+  CASO op == 1
+    res = num1 + num2
+    ESCREVA num1, "+", num2
+  CASO op == 2
+    res = num1 - num2
+    ESCREVA num1, "-", num2
+  CASO op == 3
+    res = num1 * num2
+    ESCREVA num1, "*", num2
+  CASO op == 4
+    SE num2 != 0 ENTAO
+      res = num1 / num2
+      ESCREVA num1, "/", num2
+    SENAO
+      ESCREVA "Impossível dividir!"
+    FIM_SE
+SENAO
+  ESCREVA "Operação inválida!"
+FIM_ESCOLHA
+FIM
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| num1 | num2 | op | num2 != 0 | res | saída               | 
+| --   | --   | -- | --        | --  | --                  |
+| 1    | 0    | 1  |           | 1   | 1 + 0 = 1           |
+| 1    | 0    | 2  |           | 1   | 1 - 0 = 1           |
+| 1    | 0    | 3  |           | 0   | 1 * 0 = 0           |
+| 1    | 0    | 4  | False     |     | Impossível dividir! |
+| 1    | 2    | 4  | True      | 0.5 | 1 / 2 = 0,5         |
 
 ### Exercício 04 (2.5 pontos)
 Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A (5 - 7 anos), infantil B (8 -10 anos), juvenil A (11 - 13 anos), juvenil B (14 -17 anos) e adulto (maiores que 18 anos).
