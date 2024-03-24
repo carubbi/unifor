@@ -412,10 +412,10 @@ FIM
 
 #### Teste de mesa
 
-| it | num | num_inv | num > 0 | digito | num = num // 10 | num_inv = (num_inv * 10) + digito | Saída                       |
-| -- | --  | --      | --     | --      | --              | --                                | --                          |
-|    | -1  | 0       | False  |         |                 |                                   | O número deve ser positivo! |
-| 1  | 0   | 0       | False  |         |                 |                                   | Número invertido:: 0        |
-| 1  | 42  | 0       | True   | 2       | 4               | 2                                 |                             |
-| 2  | 4   | 2       | True   | 4       | 0               | 24                                |                             |
-| 3  | 0   | 24      | False  |         |                 |                                   | Número invertido:: 24       |
+| it | num | num_inv | num > 0 | digito | num = num // 10 | num_inv = (num_inv * 10) + digito | Saída                        |
+| -- | --  | --      | --     | --      | --              | --                                | --                           |
+|    | -1  | 0       | False  |         |                 |                                   | O número deve ser positivo!  |
+| 1  | 0   | 0       | False  |         |                 |                                   | Número invertido:: 0         |
+| 1  | 42  | 0       | True   | 2       | 4               | 2                                 |                              |
+| 2  | 4   | 2       | True   | 4       | 0               | 24                                |                              |
+| 3  | 0   | 24      | False  |         |                 |                                   | Número invertido:: 24        |
