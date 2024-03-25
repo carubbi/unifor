@@ -22,21 +22,21 @@ J --> I
 ```
 
 #### Pseudocódigo
-```
-1  ALGORITMO calReajuste
-2  DECLARE  sal, sal_reaj: real, prof: caractere
-3  INICIO
-4  LEIA sal, prof
-5  ESCOLHA
-6   CASO prof == “Técnico”		// caso 1
-7     sal_reaj ← 1.5 * sal
-8   CASO prof = “Gerente”		// caso 2
-9     sal_reaj ← 1.3 * sal
-10  SENÃO
-11    sal_reaj ← 1.1 * sal
-12 FIM_ESCOLHA
-13 ESCREVA “Salário Reajustado = “, sal_reaj
-14 FIM
+```java
+ALGORITMO calReajuste
+DECLARE  sal, sal_reaj: real, prof: caractere
+INICIO
+  LEIA sal, prof
+  ESCOLHA
+    CASO prof == “Técnico”		// caso 1
+      sal_reaj ← 1.5 * sal
+    CASO prof = “Gerente”		// caso 2
+      sal_reaj ← 1.3 * sal
+    SENÃO
+      sal_reaj ← 1.1 * sal
+  FIM_ESCOLHA
+  ESCREVA “Salário Reajustado = “, sal_reaj
+FIM
 ```
 
 #### Teste
@@ -74,16 +74,16 @@ K --> L([FIM])
 ALGORTIMO Media
 DECLARE num1, num2, num3, num4: REAL
 INICIO
-ESCREVA "Digite o número 1:"
-LEIA num1
-ESCREVA "Digite o número 2:"
-LEIA num2
-ESCREVA "Digite o número 3:"
-LEIA num3
-ESCREVA "Digite o número 4:"
-LEIA num4
-media <- (num1 + num2 + num3 + num4)/4
-ESCREVA "A média é", media
+  ESCREVA "Digite o número 1:"
+  LEIA num1
+  ESCREVA "Digite o número 2:"
+  LEIA num2
+  ESCREVA "Digite o número 3:"
+  LEIA num3
+  ESCREVA "Digite o número 4:"
+  LEIA num4
+  media <- (num1 + num2 + num3 + num4)/4
+  ESCREVA "A média é", media
 FIM
 ```
 
@@ -113,10 +113,10 @@ E --> F([FIM])
 ALGORTIMO ConverteCelsiusFarenheit
 DECLARE C, F: REAL
 INICIO
-ESCREVA "Digite a temperatura em Celisus:"
-LEIA C
-F <- (9/5) * C + 32
-ESCREVA "A temperatura em Fahrenheit é", F, "graus"
+  ESCREVA "Digite a temperatura em Celisus:"
+  LEIA C
+  F <- (9/5) * C + 32
+  ESCREVA "A temperatura em Fahrenheit é", F, "graus"
 FIM
 ```
 
@@ -170,33 +170,33 @@ V --> R
 ALGORITMO CalculadoraSimples
 DECLARE op: INTEIRO; num1,num2: REAL
 INICIO
-ESCREVA "Operações válidas: 1(soma), 2(subtração), 3(multiplicação) e 4(divisão)"
-ESCREVA "Digite uma operação:"
-LEIA op
-ESCREVA "Digite um número:"
-LEIA num1
-ESCREVA "Digite outro número:"
-LEIA num2
-ESCOLHA
-  CASO op == 1
-    res = num1 + num2
-    ESCREVA num1, "+", num2
-  CASO op == 2
-    res = num1 - num2
-    ESCREVA num1, "-", num2
-  CASO op == 3
-    res = num1 * num2
-    ESCREVA num1, "*", num2
-  CASO op == 4
-    SE num2 != 0 ENTAO
-      res = num1 / num2
-      ESCREVA num1, "/", num2
-    SENAO
-      ESCREVA "Impossível dividir!"
-    FIM_SE
-SENAO
-  ESCREVA "Operação inválida!"
-FIM_ESCOLHA
+  ESCREVA "Operações válidas: 1(soma), 2(subtração), 3(multiplicação) e 4(divisão)"
+  ESCREVA "Digite uma operação:"
+  LEIA op
+  ESCREVA "Digite um número:"
+  LEIA num1
+  ESCREVA "Digite outro número:"
+  LEIA num2
+  ESCOLHA
+    CASO op == 1
+      res = num1 + num2
+      ESCREVA num1, "+", num2
+    CASO op == 2
+      res = num1 - num2
+      ESCREVA num1, "-", num2
+    CASO op == 3
+      res = num1 * num2
+      ESCREVA num1, "*", num2
+    CASO op == 4
+      SE num2 != 0 ENTAO
+        res = num1 / num2
+        ESCREVA num1, "/", num2
+      SENAO
+        ESCREVA "Impossível dividir!"
+      FIM_SE
+  SENAO
+    ESCREVA "Operação inválida!"
+  FIM_ESCOLHA
 FIM
 ```
 
@@ -243,20 +243,20 @@ N --> Z
 ALGORTIMO ClassificaCategoria
 DECLARE idade: INTEIRO
 INICIO
-ESCREVA "Digite a idade do aluno:"
-LEIA idade
-ESCOLHA 
-  CASO idade >=8 E idade <= 10
-    ESCREVA "Infantial A"
-  CASO idade >=11 E idade <= 13
-    ESCREVA "Infantial B"
-  CASO idade >=14 E idade <= 17
-    ESCREVA "Infantial C"
-  CASO idade >=18
-    ESCREVA "Adulto"
-SENAO
-  ESCREVA "Digite uma idade válida!"
-FIM_ESCOLHA
+  ESCREVA "Digite a idade do aluno:"
+  LEIA idade
+  ESCOLHA 
+    CASO idade >=8 E idade <= 10
+      ESCREVA "Infantial A"
+    CASO idade >=11 E idade <= 13
+      ESCREVA "Infantial B"
+    CASO idade >=14 E idade <= 17
+      ESCREVA "Infantial C"
+    CASO idade >=18
+      ESCREVA "Adulto"
+  SENAO
+    ESCREVA "Digite uma idade válida!"
+  FIM_ESCOLHA
 FIM
 ```
 
