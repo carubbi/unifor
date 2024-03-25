@@ -57,9 +57,9 @@ Dadas duas variáveis, $a$ e $b$, implemente e teste um algoritmo para trocar os
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B{{Digite o valor da a: }}
+A([INICIO]) --> B{{"Digite o valor da a:"}}
 B --> C[\a\]
-C --> D{{Digite o valor da b: }}
+C --> D{{"Digite o valor da b:"}}
 D --> E[\b\]
 E --> F[aux = a]
 F --> G[a = b]
@@ -70,14 +70,23 @@ I --> J{{"b =", b}}
 
 #### Pseudocódigo (1 ponto)
 
-```
-Algoritmo TrocaValores
+```java
+ALGORTIMO TrocaValores
+DECLARE a,b,axu: REAL
 INICIO
-...
+ESCREVA "Digite o valor da a:"
+LEIA a
+ESCREVA "Digite o valor da b:"
+LEIA b
+aux <- a 
+a <- b
+b <- aux
+ESCREVA "a=", a
+ESCREVA "b=", b
 FIM
 ```
 
-#### Teste de mesa
+#### Tabela de testes
 
 | a  | b  | aux | a  | b  | saída 1 | saída 2 | 
 | -- | -- | --  | -- | -- | --      | --      | 
@@ -139,15 +148,26 @@ J --LOOP--> E
 
 #### Pseudocódigo 01 (1 ponto)
 
-```
-Algoritmo ContaAprovacoes
+```java
+ALGORTIMO ContaAprovacoes
 INICIO
-...
+DECLARE n, cont, nota, i: INTEIRO
+ESCREVA "Digite a quantidade de notas dos alunos:"
+LEIA n
+cont = 0        // Inicializa o contador de alunos aprovados
+PARA i DE 1 ATE n FAÇA
+    ESCREVA "Digite a nota do aluno", i, ":"
+    LEIA nota
+    SE nota >= 50 E nota <= 100 ENTAO
+        cont = cont + 1        // Incrementa o contador de alunos aprovados
+    FIM_SE
+FIM_PARA
+ESCREVA "O numero de alunos aprovados e:", cont
 FIM
 ```
 
-#### Teste de mesa 01
-Teste de mesa referente ao algoritmo usando o loop ENQUANTO.
+#### Tabela de testes 01
+Tabela de testes referente ao algoritmo usando o loop ENQUANTO.
 
 | it | n  | i  | cont | i<=n  | nota, i | nota | nota_valida | cont+1 | i+1 | saída        | 
 | -- | -- | -- | --   | --    | --      | --   | --          | --     | --  | --           |
@@ -156,8 +176,8 @@ Teste de mesa referente ao algoritmo usando o loop ENQUANTO.
 | 3  | 3  | 3  |  1   | True  | nota 3  | 90   | True        | 2      | 4   |              |
 | 4  | 3  | 4  |  2   | False |         |      |             |        |     | Aprovados: 2 |
 
-#### Teste de mesa 02
-Teste de mesa referente ao algoritmo usando o loop PARA.
+#### Tabela de testes 02
+Tabela de testes referente ao algoritmo usando o loop PARA.
 
 | it | n  | cont | i  | nota, i | nota | nota_valida | cont+1 | saída        | 
 | -- | -- | --   | -- | --      | --   | --          | --     | --           |
@@ -202,14 +222,29 @@ K --LOOP--> G
 
 #### Pseudocódigo (1 ponto)
 
-```
+```java
 Algoritmo SomaNumeros
+DECLARE n,i,soma: INTEIRO
 INICIO
-...
+ESCREVA "Digite a quantidade de números<br> (n >= 0):"
+LEIA n
+SE n >=0 ENTAO
+    soma <- 0
+    i <- i
+    ENQUANTO i <= n FAÇA
+        ESCREVA "Digite um número:"
+        LEIA num 
+        soma <- soma + num
+        i <- i + 1
+    FIM_ENQUANTO
+SENAO
+    "O valor deve ser maior ou igual a zero!"
+FIM_SE
+ESCREVA "A soma dos numeros é , soma"
 FIM
 ```
 
-#### Teste de mesa
+#### Tabela de testes
 
 | it | n  | n >= 0 | soma | i  | i <= n | num | soma =+ num  | saída                   |
 | -- | -- | --     | --   | -- | --     | --  | --           | --                      |
@@ -241,10 +276,10 @@ $$ S = \frac{1}{2} + \frac{3}{4} + \frac{5}{6} + \frac{7}{8} + \dots $$
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B{{Digite o número de termos da série S: }}
+A([INICIO]) --> B{{"Digite o número de termos da série S:"}}
 B --> C[/n/]
 C --> D[S = 0]
-D --> E[[i=0 ATE n PASSO 1]]
+D --> E[[i=0 ATE n-1 PASSO 1]]
 E --i > n--> J{{"Soma da série S é ", S}}
 J --> K([FIM])
 E --"i=0,1,2,..,n"--> F[numerador = 2 * i + 1]
@@ -256,14 +291,24 @@ I --LOOP--> E
 
 #### Pseudocódigo (1 ponto)
 
-```
+```java
 Algoritmo SomaSerie
+DECLARE n,numerador,denominador: INTEIRO; S: REAL
 INICIO
-...
+ESCREVA "Digite o número de termos da série S:"
+LEIA n
+S <- 0
+PARA i de 0 ATÉ n-1 PASSO 1 FAÇA
+    numerador = 2 * i + 1
+    denominador <- 2 * i + 2
+    termo = numerador / denominador
+    S += termo
+FIM_PARA
+ESCREVA "Soma da série S é ", S
 FIM
 ```
 
-#### Teste de mesa (0.25 ponto)
+#### Tabela de testes (0.25 ponto)
 
 | it | n  | S  | i | numerador | denominador | termo | S += termo     | saída                  |
 | -- | -- | -- |-- | --        | --          | --    | --             | --                     |
@@ -293,7 +338,7 @@ A([INICIO]) --> B{{"Digite um numero inteiro nao-negativo:"}}
 B --> C[/n/]
 C --> D{n >= 0}
 D --TRUE--> E[fator = 1]
-D --FALSE--> J{{O valor deve ser maior ou igual a zero!}}
+D --FALSE--> J{{"O valor deve ser maior ou igual a zero!"}}
 J --> I([FIM])
 E --> F[[i=1 ATÉ n PASSO 1]]
 F --"i > n"--> H{{O fatorial de, n, é:, fator}}
@@ -304,14 +349,25 @@ H --> I
 
 #### Pseudocódigo (2 pontos)
 
-```
-Algoritmo CalcFatorial
+```java
+ALGORITMO CalcFatorial
+DECLARE n: INTEIRO
 INICIO
-...
+ESCREVA "Digite um numero inteiro nao-negativo:"
+LEIA n
+SE n >= 0 ENTAO
+    fator <- 1
+    PARA i DE 1 ATÉ n PASSO 1 FAÇA
+        fator <- fator * 1        // fator *= i
+    FIM_PARA
+    ESCREVA "O fatorial de, n, é:", fator
+SENAO
+    ESCREVA "O valor deve ser maior ou igual a zero!"
+FIM_SE
 FIM
 ```
 
-#### Teste de mesa
+#### Tabela de testes
 
 | n  | fator | i  | fator = fator * i | saída               |
 | -- | --    | -- | --                | --                  |
@@ -352,13 +408,24 @@ I --LOOP--> E
 
 #### Pseudocódigo (2 pontos)
 
-```
+```java
 Algoritmo GeraFibonacci
 INICIO
-...
+DECLARE n, a, b, termo_atual: INTEIRO
+ESCREVA "Número de termos da série Fibonacci:"
+LEIA n
+a <- 0
+b <- 1
+PARA i DE 1 ATE n FAÇA
+    ESCREVA a
+    termo_atual <- a + b
+    a <- b
+    b <- termo_atual
+FIM_PARA
 FIM
+
 ```
-#### Teste de mesa
+#### Tabela de testes
 
 | it | n  | a  | b  | i  | saída | termo_atual = a + b | a = b | b = termo_atual |
 | -- | -- | -- | -- | -- | --    | --                  | --    | --              |
@@ -403,14 +470,25 @@ E --> W
 
 #### Pseudocódigo (2 pontos)
 
-```
+```java
 Algoritmo InverteInteiro
+DECLARE num, num_inv, digito: INTEIRO
 INICIO
-...
+LEIA num
+SE num < 0 ENTAO
+    ESCREVA "O número deve ser positivo!"
+SENAO
+    num_inv <- 0
+    ENQUANTO num > 0 FAÇA
+        digito <- num % 10
+        num_inv <- (num_inv * 10) + digito 
+        num <- num // 10     
+    ESCREVA "Número invertido:", num_inv
+FIM_SE
 FIM
 ```
 
-#### Teste de mesa
+#### Tabela de testes
 
 | it | num | num_inv | num > 0 | digito | num = num // 10 | num_inv = (num_inv * 10) + digito | Saída                        |
 | -- | --  | --      | --     | --      | --              | --                                | --                           |
