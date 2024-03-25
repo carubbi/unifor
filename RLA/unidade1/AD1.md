@@ -75,14 +75,14 @@ ALGORTIMO TrocaValores
 DECLARE a,b,axu: REAL
 INICIO
 ESCREVA "Digite o valor da a:"
-LEIA a
-ESCREVA "Digite o valor da b:"
-LEIA b
-aux <- a 
-a <- b
-b <- aux
-ESCREVA "a=", a
-ESCREVA "b=", b
+    LEIA a
+    ESCREVA "Digite o valor da b:"
+    LEIA b
+    aux <- a 
+    a <- b
+    b <- aux
+    ESCREVA "a=", a
+    ESCREVA "b=", b
 FIM
 ```
 
@@ -151,18 +151,18 @@ J --LOOP--> E
 ```java
 ALGORTIMO ContaAprovacoes
 INICIO
-DECLARE n, cont, nota, i: INTEIRO
-ESCREVA "Digite a quantidade de notas dos alunos:"
-LEIA n
-cont = 0        // Inicializa o contador de alunos aprovados
-PARA i DE 1 ATE n FAÇA
-    ESCREVA "Digite a nota do aluno", i, ":"
-    LEIA nota
-    SE nota >= 50 E nota <= 100 ENTAO
-        cont = cont + 1        // Incrementa o contador de alunos aprovados
-    FIM_SE
-FIM_PARA
-ESCREVA "O numero de alunos aprovados e:", cont
+    DECLARE n, cont, nota, i: INTEIRO
+    ESCREVA "Digite a quantidade de notas dos alunos:"
+    LEIA n
+    cont = 0        // Inicializa o contador de alunos aprovados
+    PARA i DE 1 ATE n FAÇA
+        ESCREVA "Digite a nota do aluno", i, ":"
+        LEIA nota
+        SE nota >= 50 E nota <= 100 ENTAO
+            cont = cont + 1        // Incrementa o contador de alunos aprovados
+        FIM_SE
+    FIM_PARA
+    ESCREVA "O numero de alunos aprovados e:", cont
 FIM
 ```
 
@@ -226,21 +226,21 @@ K --LOOP--> G
 Algoritmo SomaNumeros
 DECLARE n,i,soma: INTEIRO
 INICIO
-ESCREVA "Digite a quantidade de números<br> (n >= 0):"
-LEIA n
-SE n >=0 ENTAO
-    soma <- 0
-    i <- i
-    ENQUANTO i <= n FAÇA
-        ESCREVA "Digite um número:"
-        LEIA num 
-        soma <- soma + num
-        i <- i + 1
-    FIM_ENQUANTO
-SENAO
-    "O valor deve ser maior ou igual a zero!"
-FIM_SE
-ESCREVA "A soma dos numeros é , soma"
+    ESCREVA "Digite a quantidade de números<br> (n >= 0):"
+    LEIA n
+    SE n >=0 ENTAO
+        soma <- 0
+        i <- i
+        ENQUANTO i <= n FAÇA
+            ESCREVA "Digite um número:"
+            LEIA num 
+            soma <- soma + num
+            i <- i + 1
+        FIM_ENQUANTO
+    SENAO
+        "O valor deve ser maior ou igual a zero!"
+    FIM_SE
+    ESCREVA "A soma dos numeros é , soma"
 FIM
 ```
 
@@ -295,16 +295,16 @@ I --LOOP--> E
 Algoritmo SomaSerie
 DECLARE n,numerador,denominador: INTEIRO; S: REAL
 INICIO
-ESCREVA "Digite o número de termos da série S:"
-LEIA n
-S <- 0
-PARA i de 0 ATÉ n-1 PASSO 1 FAÇA
-    numerador = 2 * i + 1
-    denominador <- 2 * i + 2
-    termo = numerador / denominador
-    S += termo
-FIM_PARA
-ESCREVA "Soma da série S é ", S
+    ESCREVA "Digite o número de termos da série S:"
+    LEIA n
+    S <- 0
+    PARA i de 0 ATÉ n-1 PASSO 1 FAÇA
+        numerador = 2 * i + 1
+        denominador <- 2 * i + 2
+        termo = numerador / denominador
+        S += termo
+    FIM_PARA
+    ESCREVA "Soma da série S é ", S
 FIM
 ```
 
@@ -353,17 +353,17 @@ H --> I
 ALGORITMO CalcFatorial
 DECLARE n: INTEIRO
 INICIO
-ESCREVA "Digite um numero inteiro nao-negativo:"
-LEIA n
-SE n >= 0 ENTAO
-    fator <- 1
-    PARA i DE 1 ATÉ n PASSO 1 FAÇA
-        fator <- fator * 1        // fator *= i
-    FIM_PARA
-    ESCREVA "O fatorial de, n, é:", fator
-SENAO
-    ESCREVA "O valor deve ser maior ou igual a zero!"
-FIM_SE
+    ESCREVA "Digite um numero inteiro nao-negativo:"
+    LEIA n
+    SE n >= 0 ENTAO
+        fator <- 1
+        PARA i DE 1 ATÉ n PASSO 1 FAÇA
+            fator <- fator * 1        // fator *= i
+        FIM_PARA
+        ESCREVA "O fatorial de, n, é:", fator
+    SENAO
+        ESCREVA "O valor deve ser maior ou igual a zero!"
+    FIM_SE
 FIM
 ```
 
@@ -411,17 +411,17 @@ I --LOOP--> E
 ```java
 Algoritmo GeraFibonacci
 INICIO
-DECLARE n, a, b, termo_atual: INTEIRO
-ESCREVA "Número de termos da série Fibonacci:"
-LEIA n
-a <- 0
-b <- 1
-PARA i DE 1 ATE n FAÇA
-    ESCREVA a
-    termo_atual <- a + b
-    a <- b
-    b <- termo_atual
-FIM_PARA
+    DECLARE n, a, b, termo_atual: INTEIRO
+    ESCREVA "Número de termos da série Fibonacci:"
+    LEIA n
+    a <- 0
+    b <- 1
+    PARA i DE 1 ATE n FAÇA
+        ESCREVA a
+        termo_atual <- a + b
+        a <- b
+        b <- termo_atual
+    FIM_PARA
 FIM
 
 ```
@@ -474,17 +474,17 @@ E --> W
 Algoritmo InverteInteiro
 DECLARE num, num_inv, digito: INTEIRO
 INICIO
-LEIA num
-SE num < 0 ENTAO
-    ESCREVA "O número deve ser positivo!"
-SENAO
-    num_inv <- 0
-    ENQUANTO num > 0 FAÇA
-        digito <- num % 10
-        num_inv <- (num_inv * 10) + digito 
-        num <- num // 10     
-    ESCREVA "Número invertido:", num_inv
-FIM_SE
+    LEIA num
+    SE num < 0 ENTAO
+        ESCREVA "O número deve ser positivo!"
+    SENAO
+        num_inv <- 0
+        ENQUANTO num > 0 FAÇA
+            digito <- num % 10
+            num_inv <- (num_inv * 10) + digito 
+            num <- num // 10     
+        ESCREVA "Número invertido:", num_inv
+    FIM_SE
 FIM
 ```
 
