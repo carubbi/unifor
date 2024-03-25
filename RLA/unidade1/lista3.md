@@ -20,17 +20,17 @@ G --LOOP--> E
 
 #### Pseudocódigo
 ```java
-1 ALGORITMO print_n_primeiros
-2 DECLARE n, num: INTEIRO
-3 INICIO
-4 ESCREVA “Digite um número: ”
-4 LEIA n			// variável de entrada n
-4 num ← 1			// variável num inicializada
-5 ENQUANTO num <= n FAÇA	// n iterações
-7	ESCREVA “Número ”, num
-8	num ← num + 1		// num =+ 1 (incremento)
-8 FIM_ENQUANTO
-9 FIM
+ALGORITMO print_n_primeiros
+DECLARE n, num: INTEIRO
+INICIO
+  ESCREVA “Digite um número: ”
+  LEIA n			// variável de entrada n
+  num ← 1			// variável num inicializada
+  ENQUANTO num <= n FAÇA	// n iterações
+    ESCREVA “Número ”, num
+    num ← num + 1		// num =+ 1 (incremento)
+  FIM_ENQUANTO
+FIM
 ```
 
 #### Tabela de testes
@@ -65,16 +65,16 @@ F --LOOP--> E
 
 #### Pseudocódigo
 ```java
-1  ALGORITMO	soma_n_numeros()
-2  DECLARE	n, i, soma: INTEIRO
-3  INICIO
-4  ESCREVA “Digite a quantidade de números: ”
-5  LEIA n		// variável de entrada n
-7  soma ← 0		// variável soma inicializada
-6  PARA i DE 1 ATÉ n PASSO 1 FAÇA
-7	   soma ← soma + i	// soma =+ i (incremento)
-8  FIM_PARA
-9  ESCREVA “A soma é igual a ”, soma
+ALGORITMO	soma_n_numeros()
+DECLARE	n, i, soma: INTEIRO
+INICIO
+  ESCREVA “Digite a quantidade de números: ”
+  LEIA n    // variável de entrada n
+  soma ← 0    // variável soma inicializada
+  PARA i DE 1 ATÉ n PASSO 1 FAÇA
+    soma ← soma + i    // soma =+ i (incremento)
+  FIM_PARA
+  ESCREVA “A soma é igual a ”, soma
 10 FIM
 ```
 
@@ -118,22 +118,22 @@ G --LOOP--> D
 #### Pseudocódigo (1.0 ponto)
 
 ```java
-1  ALGORTIMO verifica_par_impar
-2  DECLARE numero, resto: INTEIRO
-3  ESCREVA "Digite um número: "
-4  INICIO
-4  LEIA numero
-5  SE numero >= 0 ENTAO                  // verifica se o inteiro é positivo
-6    resto ← numero % 2                 // calcula o resto da divisão por 2
-7    SE resto == 0 ENTAO                // verifica se o resto é igual a zero
-8      ESCREVA "O número é par!"
-9    SENAO
-10     ESCREVA "O número é impar!"
-11   FIM_SE
-11  SENAO                                // caso inteiro for negativo (condição linha 5)
-12    ESCREVA "O número deve ser postivo!"
-13 FIM_SE
-13 FIM
+ALGORTIMO verifica_par_impar
+DECLARE numero, resto: INTEIRO
+ESCREVA "Digite um número: "
+INICIO
+  LEIA numero
+  SE numero >= 0 ENTAO                  // verifica se o inteiro é positivo
+    resto ← numero % 2                 // calcula o resto da divisão por 2
+    SE resto == 0 ENTAO                // verifica se o resto é igual a zero
+      ESCREVA "O número é par!"
+    SENAO
+      ESCREVA "O número é impar!"
+    FIM_SE
+  SENAO                                // caso inteiro for negativo (condição linha 5)
+    ESCREVA "O número deve ser postivo!"
+  FIM_SE
+FIM
 ```
 
 #### Tabela de testes (0.5 ponto)
@@ -164,12 +164,13 @@ F --LOOP--> E
 ```java
 ALGORTIMO MultiploTres
 DECLARE n: INTEIRO
-ESCREVA "Digite a quantidade de números:"
-LEIA n
-PARA i DE 0 ATÉ n-1 PASSO 3 FAÇA
-  ESCREVA i
-FIM_PARA
-FIM_ALGORITMO
+INICIO
+  ESCREVA "Digite a quantidade de números:"
+  LEIA n
+  PARA i DE 0 ATÉ n-1 PASSO 3 FAÇA
+    ESCREVA i
+  FIM_PARA
+FIM
 ```
 
 #### Tabela de testes (0.5 ponto)
@@ -222,18 +223,19 @@ I --LOOP--> E
 ```java
 ALGORITMO SomaValores
 DECLARE n,i: INTEIRO; soma,num: REAL
-ESCREVA "Digite a quantidade de números:"
-LEIA n
-soma <- 0
-i <- 1
-ENQUANTO i <= n FAÇA
-  ESCREVA "Digite o número", i,":"
-  LEIA num
-  soma <- soma + num
-  i <- i + 1
-FIM_ENQUANTO
-ESCREVA "A soma dos número é", soma
-FIM_ALGORITMO
+INICIO
+  ESCREVA "Digite a quantidade de números:"
+  LEIA n
+  soma <- 0
+  i <- 1
+  ENQUANTO i <= n FAÇA
+    ESCREVA "Digite o número", i,":"
+    LEIA num
+    soma <- soma + num
+    i <- i + 1
+  FIM_ENQUANTO
+  ESCREVA "A soma dos número é", soma
+FIM
 ```
 
 #### Tabela de testes (0.5 ponto)
@@ -275,20 +277,21 @@ J --LOOP--> E
 #### Pseudocódigo
 
 ```java
-1  ALGORTIMO QuantMedia
-2  DECLARE quant: INT; soma, nota, media: REAL
-3  soma <- 0
-4  quant <- 0
-5  nota <- 0
-6  ENQUANTO nota >= 0 FAÇA
-7    ESCREVA "Digite a nota do aluno (nota negativa encerra o algortimo:"
-8    LEIA nota
-9    soma <- soma + nota
-10   quant <- quant + 1
-11 SE quant > 0 ENTAO
-12   media <- soma / quant
-13   ESCREVA "Foram lidas", quant, "notas. A média aritmética é", media, "!"
-14 FIM_ALGORITMO
+ALGORTIMO QuantMedia
+DECLARE quant: INT; soma, nota, media: REAL
+INICIO
+  soma <- 0
+  quant <- 0
+  nota <- 0
+  ENQUANTO nota >= 0 FAÇA
+    ESCREVA "Digite a nota do aluno (nota negativa encerra o algortimo:"
+    LEIA nota
+    soma <- soma + nota
+    quant <- quant + 1
+    SE quant > 0 ENTAO
+      media <- soma / quant
+  ESCREVA "Foram lidas", quant, "notas. A média aritmética é", media, "!"
+FIM
 ```
 
 #### Tabela de testes (0.5 ponto)
