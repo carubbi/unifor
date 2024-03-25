@@ -36,9 +36,12 @@ A avaliação da **AP1** é apenas considerada no intervalo de 0% (não atende o
 Por exemplo, se na apresentação do exercício, o aluno atenter de forma razoável a questão, então sua avaliação da apresentação será 7.5 pontos.
 
 ## Datas
-- Entrega da primeira avaliação formativa (**AF1**) composta pelas listas de exerciícios 1, 2 e 3: 21/03/24
-- Entrega dos exercícios da primeira avaliação diagnóstica (**EX1**): 21/03/24
-- Apresentação da primeira avaliação diagnóstica (**AP1**): 21/03/24
+- Entrega da primeira avaliação formativa (**AF1**) composta pelas listas de exerciícios 1, 2 e 3: 21/03/24 e 22/03/24 apenas para T998 - 08/09.
+- Entrega dos exercícios da primeira avaliação diagnóstica (**EX1**): 21/03/24 e 22/03/24 apenas para T998 - 08/09.
+- Apresentação da primeira avaliação diagnóstica (**AP1**): 21/03/24 e 22/03/24 apenas para T998 - 08/09.
+
+## Observações
+- Não serão admitidas alterações dos exercícios após a entrega do trabalho sob penalização da anulação do(s) trabalho(s).
 
 ## Lista de questões
 
