@@ -41,7 +41,7 @@ Por exemplo, se na apresentação do exercício, o aluno atenter de forma razoá
 - Apresentação da primeira avaliação diagnóstica (**AP1**): 21/03/24 e 22/03/24 apenas para T998 - 08/09.
 
 ## Observações
-- Não serão admitidas alterações dos exercícios após a entrega do trabalho sob penalização da anulação do(s) trabalho(s).
+- Não serão admitidas alterações dos exercícios após a entrega do(s) trabalho(s) sob penalização com a anulação dos mesmos.
 
 ## Lista de questões
 
