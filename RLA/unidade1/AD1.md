@@ -361,7 +361,7 @@ INICIO
     SE n >= 0 ENTAO
         fator <- 1
         PARA i DE 1 ATÉ n PASSO 1 FAÇA
-            fator <- fator * 1        // fator *= i
+            fator <- fator * i        // fator *= i
         FIM_PARA
         ESCREVA "O fatorial de, n, é:", fator
     SENAO
