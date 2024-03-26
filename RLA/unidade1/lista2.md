@@ -22,7 +22,7 @@ J --> I
 ```
 
 #### Pseudocódigo
-```java
+```
 ALGORITMO calReajuste
 DECLARE  sal, sal_reaj: real, prof: caractere
 INICIO
