@@ -477,6 +477,7 @@ E --> W
 Algoritmo InverteInteiro
 DECLARE num, num_inv, digito: INTEIRO
 INICIO
+    ESCREVA "Digite o número a ser invertido:"
     LEIA num
     SE num < 0 ENTAO
         ESCREVA "O número deve ser positivo!"
