@@ -148,15 +148,15 @@ L --FALSE--> O{op == 4}
 O --FALSE--> Q{{Operação inválida!}}
 Q --> R([FIM])
 I --TRUE--> M[res = num1 + num2]
-M --> S{{num1, + , num2}}
+M --> S{{num1, + , num2, =, res}}
 J --TRUE--> K[res = num1 - num2]
-K --> T{{num1, - , num2}}
+K --> T{{num1, - , num2, =, res}}
 L --TRUE--> N[res = num1 * num2]
-N --> U{{num1, * , num2}}
+N --> U{{num1, * , num2, =, res}}
 O --TRUE--> P{num2 != 0}
 P --FALSE--> X{{Impossível dividir!}}
 P --TRUE--> Z[res = num1 / num2]
-Z --> V{{num1, / , num2}}
+Z --> V{{num1, / , num2}, =, res}
 X --> R
 S --> R
 T --> R
