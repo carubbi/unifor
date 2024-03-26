@@ -28,7 +28,7 @@ INICIO
   num ← 1			// variável num inicializada
   ENQUANTO num <= n FAÇA	// n iterações
     ESCREVA “Número ”, num
-    num ← num + 1		// num =+ 1 (incremento)
+    num ← num + 1		// num += 1 (incremento)
   FIM_ENQUANTO
 FIM
 ```
