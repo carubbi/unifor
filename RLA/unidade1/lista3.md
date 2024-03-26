@@ -126,6 +126,7 @@ INICIO
   ENQUANTO num < 0 FAÇA
     ESCREVA "Digite um número maior ou igual a zero:"
     LEIA numero
+  FIM_ENQUANTO
   SE numero >= 0 ENTAO                  // verifica se o inteiro é positivo
     resto ← numero % 2                 // calcula o resto da divisão por 2
     SE resto == 0 ENTAO                // verifica se o resto é igual a zero
