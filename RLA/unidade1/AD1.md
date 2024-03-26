@@ -296,7 +296,7 @@ I --LOOP--> E
 
 ```java
 Algoritmo SomaSerie
-DECLARE n,numerador,denominador: INTEIRO; S: REAL
+DECLARE n,numerador,denominador: INTEIRO; termo, S: REAL
 INICIO
     ESCREVA "Digite o número de termos da série S:"
     LEIA n
