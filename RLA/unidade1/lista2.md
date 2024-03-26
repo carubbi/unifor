@@ -180,17 +180,17 @@ INICIO
   ESCOLHA
     CASO op == 1
       res = num1 + num2
-      ESCREVA num1, "+", num2
+      ESCREVA num1, "+", num2, "=", res
     CASO op == 2
       res = num1 - num2
-      ESCREVA num1, "-", num2
+      ESCREVA num1, "-", num2, "=", res
     CASO op == 3
       res = num1 * num2
-      ESCREVA num1, "*", num2
+      ESCREVA num1, "*", num2, "=", res
     CASO op == 4
       SE num2 != 0 ENTAO
         res = num1 / num2
-        ESCREVA num1, "/", num2
+        ESCREVA num1, "/", num2, "=", res
       SENAO
         ESCREVA "Impossível dividir!"
       FIM_SE
