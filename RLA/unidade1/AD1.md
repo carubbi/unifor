@@ -283,9 +283,9 @@ A([INICIO]) --> B{{"Digite o número de termos da série S:"}}
 B --> C[/n/]
 C --> D[S = 0]
 D --> E[[i=0 ATE n-1 PASSO 1]]
-E --i > n--> J{{"Soma da série S é ", S}}
+E --i > n-1--> J{{"Soma da série S é ", S}}
 J --> K([FIM])
-E --"i=0,1,2,..,n"--> F[numerador = 2 * i + 1]
+E --"i=0,1,2,..,n-1"--> F[numerador = 2 * i + 1]
 F --> G[denominador = 2 * i + 2]
 G --> H[termo = numerador / denominador]
 H --> I[S += termo]
