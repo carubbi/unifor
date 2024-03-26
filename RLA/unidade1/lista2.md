@@ -156,7 +156,7 @@ N --> U{{num1, * , num2, =, res}}
 O --TRUE--> P{num2 != 0}
 P --FALSE--> X{{Impossível dividir!}}
 P --TRUE--> Z[res = num1 / num2]
-Z --> V{{num1, / , num2}, =, res}
+Z --> V{num1, / , num2, =, res}
 X --> R
 S --> R
 T --> R
