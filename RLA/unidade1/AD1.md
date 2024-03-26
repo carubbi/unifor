@@ -25,7 +25,7 @@ $$AV_1 = AF_1 \times 0,30 + AD_1 \times 0,70$$
 A **AD1** é formada pela entrega dos exercícios (**EX1**) na data prevista e apresentação (**AP1**) de um dos exercícios escolhido pelo professor.
 Segue abaixo a expressão para o cálculo da **AD1**.
 
-$$AD_1 = (EX1_1 + AP_1)/2 $$
+$$AD_1 = (EX_1 + AP_1)/2 $$
 
 A **EX1** é avaliada mediante a **correção dos exercícios**, sendo a avaliação no intervalo de 0% (não atende a questão), 50% (atende parcialmente) e 100% (atende em sua totalidade).
 Por exemplo, se o exercício equivale a 2 pontos e sua correção atente parcialmente a questão, então sua avaliação deste exercício será 1 ponto.
