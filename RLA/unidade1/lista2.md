@@ -168,7 +168,7 @@ V --> R
 
 ```java
 ALGORITMO CalculadoraSimples
-DECLARE op: INTEIRO; num1,num2: REAL; res = CARACTERE
+DECLARE op: INTEIRO; num1,num2,res: REAL
 INICIO
   ESCREVA "Operações válidas: 1(soma), 2(subtração), 3(multiplicação) e 4(divisão)"
   ESCREVA "Digite uma operação:"
