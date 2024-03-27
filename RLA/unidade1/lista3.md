@@ -281,7 +281,7 @@ K --LOOP-->  E
 
 ```java
 ALGORTIMO QuantMedia
-DECLARE nota, soma, contador: REAL
+DECLARE nota, soma, media: REAL; cont: INTEIRO
 
 INICIO
 	nota <- LEIA("Digite a nota do aluno (nota negativa finaliza): ")
@@ -296,19 +296,25 @@ INICIO
 	
 	SE cont > 0 ENTÃO
 		media <- soma / cont
-		ESCREVA "Foram lidas", cont, "notas. A média aritmética é", media
+		ESCREVA "Foram lidas", cont, "nota(s). A média aritmética é", media
 	FIM_SE
 FIM
 ```
 
-#### Tabela de testes (0.5 ponto)
+#### Tabela de testes
 
-| it  | nota | soma | cont | nota >= 0 | soma + nota | cont + 1 | nota    | cont > 0 | media | saída                     | 
-| --  | --   | --   | --   | --        | --          | --       | --      | --       | --    | --                        |
-| 1   | -1   | 0    | 0    | False     |             |          |         | False    |       |                           |
-| 1   | 0    | 0    | 0    | True      | 0+0 = 0     | 0+1 = 1  | -1      |          |       |                           |
-| 1   | 0    | 0     | 0    | -1    |             |           |          |                                               |
-| 1   | 0    | 0     | 0    | 40    | 0+40=40     | 0+1=1     |          |                                               |
-| 2   | 0    | 0     | 0    | 60    | 40+60=100   | 1+1=2     |          |                                               |
-| 3   | 0    | 0     | 0    | 20    | 100+20=120  | 2+1=3     |          |                                               |
-| 4   | 0    | 0     | 0    | -1    |             |           | 120/3=40 | Foram lidas 3 notas. A média aritmética é 40! |
+| it  | nota  | soma  | cont | nota >= 0 | soma + nota     | cont + 1 | nota    | cont > 0 | media          | saída                                            | 
+| --  | --    | --    | --   | --        | --              | --       | --      | --       | --             | --                                               |
+| 1   | -1.0  | 0.0   | 0    | False     |                 |          |         | False    |                |                                                  |
+
+| it  | nota  | soma  | cont | nota >= 0 | soma + nota     | cont + 1 | nota    | cont > 0 | media          | saída                                            | 
+| --  | --    | --    | --   | --        | --              | --       | --      | --       | --             | --                                               |
+| 1   | 0.0   | 0.0   | 0    | True      | 0.0+0.0 = 0.0   | 0+1 = 1  | -1.0    |          |                |                                                  |
+| 2   | -1.0  | 0.0   | 1    | False     |                 |          |         | True     | 0.0/1 = .0     | Foram lidas 1 nota(s). A média aritmética é 0.0! |
+
+| it  | nota  | soma  | cont | nota >= 0 | soma + nota     | cont + 1 | nota    | cont > 0 | media          | saída                                            | 
+| --  | --    | --    | --   | --        | --              | --       | --      | --       | --             | --                                               |
+| 1   | 4.0   | 0.0   | 0    | True      | 0.0+4.0 = 4.0   | 0+1 = 1  | 8.0     |          |                |                                                  |
+| 2   | 8.0   | 4.0   | 1    | True      | 4.0+8.0 = 12.0  | 1+1 = 2  | 6.0     |          |                |                                                  |
+| 3   | 6.0   | 12.0  | 2    | True      | 12.0+6.0 = 18.0 | 2+1 = 3  | -8.0    |          |                |                                                  |
+| 4   | -8.0  | 18.0  | 3    |           |                 |          |         | True     | 18.0/3.0 = 6.0 | Foram lidas 3 nota(s). A média aritmética é 6.0! |
