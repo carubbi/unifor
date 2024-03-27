@@ -76,16 +76,30 @@ I --> J{{"b =", b}}
 ```java
 ALGORTIMO TrocaValores
 DECLARE a,b,axu: REAL
+
 INICIO
-ESCREVA "Digite o valor da a:"
+
+    // Insira seu comentário
+    ESCREVA "Digite o valor da a:"
     LEIA a
+
+    // Insira seu comentário
     ESCREVA "Digite o valor da b:"
     LEIA b
+
+    // Insira seu comentário
     aux <- a 
+
+    // Insira seu comentário
     a <- b
+
+    // Insira seu comentário
     b <- aux
+
+    // Insira seu comentário
     ESCREVA "a=", a
     ESCREVA "b=", b
+
 FIM
 ```
 
@@ -153,19 +167,37 @@ J --LOOP--> E
 
 ```java
 ALGORTIMO ContaAprovacoes
+DECLARE n, cont, nota, i: INTEIRO
+
 INICIO
-    DECLARE n, cont, nota, i: INTEIRO
+
+    // Insira seu comentário
     ESCREVA "Digite a quantidade de notas dos alunos:"
     LEIA n
-    cont = 0        // Inicializa o contador de alunos aprovados
+
+    // Insira seu comentário
+    cont = 0 
+
+    // Insira seu comentário
     PARA i DE 1 ATE n FAÇA
+
+        // Insira seu comentário
         ESCREVA "Digite a nota do aluno", i, ":"
         LEIA nota
+
+        // Insira seu comentário
         SE nota >= 50 E nota <= 100 ENTAO
-            cont = cont + 1        // Incrementa o contador de alunos aprovados
+
+            // Insira seu comentário
+            cont = cont + 1 
+
         FIM_SE
+
     FIM_PARA
+
+    // Insira seu comentário
     ESCREVA "O numero de alunos aprovados e:", cont
+
 FIM
 ```
 
@@ -228,22 +260,46 @@ K --LOOP--> G
 ```java
 Algoritmo SomaNumeros
 DECLARE n,i,soma: INTEIRO
+
 INICIO
+
+    // Insira seu comentário
     ESCREVA "Digite a quantidade de números<br> (n >= 0):"
     LEIA n
+
+    // Insira seu comentário
     SE n >=0 ENTAO
+
+        // Insira seu comentário
         soma <- 0
+
+        // Insira seu comentário
         i <- i
+
+        // Insira seu comentário
         ENQUANTO i <= n FAÇA
+
+            // Insira seu comentário
             ESCREVA "Digite um número:"
             LEIA num 
+
+            // Insira seu comentário
             soma <- soma + num
+
+            // Insira seu comentário
             i <- i + 1
+
         FIM_ENQUANTO
+
+    // Insira seu comentário
     SENAO
         "O valor deve ser maior ou igual a zero!"
+
     FIM_SE
+
+    // Insira seu comentário
     ESCREVA "A soma dos numeros é , soma"
+
 FIM
 ```
 
@@ -297,17 +353,36 @@ I --LOOP--> E
 ```java
 Algoritmo SomaSerie
 DECLARE n,numerador,denominador: INTEIRO; termo, S: REAL
+
 INICIO
+
+    // Insira seu comentário
     ESCREVA "Digite o número de termos da série S:"
     LEIA n
+
+    // Insira seu comentário
     S <- 0
+
+    // Insira seu comentário
     PARA i de 0 ATÉ n-1 PASSO 1 FAÇA
+
+        // Insira seu comentário
         numerador = 2 * i + 1
+
+        // Insira seu comentário
         denominador <- 2 * i + 2
+
+        // Insira seu comentário
         termo = numerador / denominador
+
+        // Insira seu comentário
         S += termo
+
     FIM_PARA
+
+    // Insira seu comentário
     ESCREVA "Soma da série S é ", S
+
 FIM
 ```
 
@@ -355,18 +430,35 @@ H --> I
 ```java
 ALGORITMO CalcFatorial
 DECLARE n: INTEIRO
+
 INICIO
+
+    // Insira seu comentário
     ESCREVA "Digite um numero inteiro nao-negativo:"
     LEIA n
+
+    // Insira seu comentário
     SE n >= 0 ENTAO
+
+        // Insira seu comentário
         fator <- 1
+
+        // Insira seu comentário
         PARA i DE 1 ATÉ n PASSO 1 FAÇA
+
+            // Insira seu comentário
             fator <- fator * i        // fator *= i
+
         FIM_PARA
+
+        // Insira seu comentário
         ESCREVA "O fatorial de, n, é:", fator
+
+    // Insira seu comentário
     SENAO
         ESCREVA "O valor deve ser maior ou igual a zero!"
     FIM_SE
+
 FIM
 ```
 
@@ -398,32 +490,49 @@ Os primeiros termos são: $0, 1, 1, 2, 3, 5, 8, 13, \dots$. Cada termo, além do
 ```mermaid
 flowchart TD
 A([INICIO]) --> B{{"Número de termos da série Fibonacci:"}}
-B --> C[a = 0]
-C --> D[b = 1]
-D --> E[[i=1 ATÉ n PASSO 1]]
-E --"i > n"--> J([FIM])
-E --"i=1,2,...,n"--> F{{a}}
-F --> G[termo_atual = a + b]
-G --> H[a = b]
-H --> I[b = termo_atual]
-I --LOOP--> E 
+B --> C[/n/]
+C --> D[a = 0]
+D --> E[b = 1]
+E --> F[[i=1 ATÉ n PASSO 1]]
+F --"i > n"--> K([FIM])
+F --"i=1,2,...,n"--> G{{a}}
+G --> H[termo_atual = a + b]
+H --> I[a = b]
+I --> J[b = termo_atual]
+J --LOOP--> F 
 ```
 
 #### Pseudocódigo (2 pontos)
 
 ```java
-Algoritmo GeraFibonacci
+ALGORITMO GeraFibonacci
+DECLARE n, a, b, termo_atual: INTEIRO
+
 INICIO
-    DECLARE n, a, b, termo_atual: INTEIRO
+
+    // Insira seu comentário
     ESCREVA "Número de termos da série Fibonacci:"
     LEIA n
+
+    // Insira seu comentário
     a <- 0
     b <- 1
+
+    // Insira seu comentário
     PARA i DE 1 ATE n FAÇA
+
+        // Insira seu comentário
         ESCREVA a
+
+        // Insira seu comentário
         termo_atual <- a + b
+
+        // Insira seu comentário
         a <- b
+
+        // Insira seu comentário
         b <- termo_atual
+
     FIM_PARA
 FIM
 
@@ -476,19 +585,42 @@ E --> W
 ```java
 Algoritmo InverteInteiro
 DECLARE num, num_inv, digito: INTEIRO
+
 INICIO
+
+    // Insira seu comentário
     ESCREVA "Digite o número a ser invertido:"
     LEIA num
+
+    // Insira seu comentário
     SE num < 0 ENTAO
+
+        // Insira seu comentário
         ESCREVA "O número deve ser positivo!"
+
+    // Insira seu comentário
     SENAO
+
+        // Insira seu comentário
         num_inv <- 0
+
+        // Insira seu comentário
         ENQUANTO num > 0 FAÇA
+
+            // Insira seu comentário
             digito <- num % 10
-            num_inv <- (num_inv * 10) + digito 
-            num <- num // 10     
+
+            // Insira seu comentário
+            num_inv <- (num_inv * 10) + digito
+
+            // Insira seu comentário
+            num <- num // 10
+
+        // Insira seu comentário
         ESCREVA "Número invertido:", num_inv
+
     FIM_SE
+
 FIM
 ```
 
