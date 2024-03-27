@@ -315,10 +315,10 @@ INICIO
 		// Armazena o valor de entrada na variável "num"
 		LEIA num
 
-		// Incrementa "num" na variável "soma"
+		// Incrementa "num" na variável "soma" em cada iteração
 		soma <- soma + num
 
-		// Incrementa em 1 na variável "i" em cada iteração 
+		// Incrementa 1 na variável "num" em cada iteração
 		i <- i + 1
 
 	FIM_ENQUANTO
@@ -374,6 +374,8 @@ INICIO
 	
 	// Entrada do usuário da primeira nota
 	ESCREVA "Digite a nota do aluno (nota negativa finaliza): "
+
+	// Armazena o valor de entrada na variável "nota"
 	LEIA nota
 	
 	// Inicialização das variáveis soma e cont
@@ -382,16 +384,30 @@ INICIO
 	
 	// Loop condicional para execucar as instruções até que a nota seja negativa
 	ENQUANTO nota >= 0 FAÇA
+
+		// Incrementa "nota" à variável "soma" a cada iteração
 		soma <- soma + nota
+
+		// Incrementa em 1 na variável "cont" a cada iteração
 		cont <- cont + 1
+
+		// Solicita uma nota de outro aluno, sendo valores negativos permitem a saída do loop condicional (loop while)
 		ESCREVA "Digite a nota do aluno (nota negativa finaliza): "
+
+		// Reatribui um novo valor na variável "nota"
 		LEIA nota
+
 	FIM_ENQUANTO
 
 	// Condição para exibir a contagem e média das notas se a variável cont for maior que zero.
 	SE cont > 0 ENTÃO
+
+		// Calcula a média das notas dos alunos aprovados
 		media <- soma / cont
+
+		// Exibe a mensagem com o número de alunos aprovados e a média geral
 		ESCREVA "Foram lidas", cont, "nota(s). A média aritmética é", media
+
 	FIM_SE
 
 FIM
