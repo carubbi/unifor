@@ -24,24 +24,41 @@ H --> Z
 I --> Z
 ```
 
-#### Pseudocódigo (0,5 ponto)
+#### Pseudocódigo
 ```java
 ALGORTIMO verifica_par_impar
 DECLARE numero, resto: INTEIRO
+
 INICIO
-  ESCREVA "Digite um número: "
-  INICIO
-  LEIA numero
-  SE numero >= 0 ENTAO                  // verifica se o inteiro é positivo
-    resto <- numero % 2                 // calcula o resto da divisão por 2
-    SE resto == 0 ENTAO                // verifica se o resto é igual a zero
-      ESCREVA "O número é par!"
-    SENAO
-      ESCREVA "O número é impar!"
+
+    // Insira seu comentário
+    ESCREVA "Digite um número: "
+    
+    // Insira seu comentário
+    LEIA numero
+    
+    // Insira seu comentário
+    SE numero >= 0 ENTAO
+
+        // Insira seu comentário
+        resto <- numero % 2
+
+        // Insira seu comentário
+        SE resto == 0 ENTAO
+            ESCREVA "O número é par!"
+
+        // Insira seu comentário
+        SENAO
+          ESCREVA "O número é impar!"
+
+        FIM_SE
+
+    // Insira seu comentário
+    SENAO             
+        ESCREVA "O número deve ser postivo!"
+
     FIM_SE
-  SENAO                                // caso inteiro for negativo (condição linha 5)
-     ESCREVA "O número deve ser postivo!"
-  FIM_SE
+
 FIM
 ```
 
@@ -76,15 +93,28 @@ G --> H([FIM])
 ```java
 ALGORTIMO ReajusteSalario
 DECLARE sal_atual, sal_reaj: REAL
+
 INICIO
-  ESCREVA "Digite seu salário atual:"
-  LEIA sal_atual
-  SE sal_atual <= 500 ENTAO
-    sal_reaj = sal_atual * 1.2
-  SENAO
-    sal_reaj = sal_atual * 1.1
-  FIM_SE
-  ESCREVA "O novo salário é R$", sal_reaj
+
+    // Insira seu comentário
+    ESCREVA "Digite seu salário atual:"
+
+    // Insira seu comentário
+    LEIA sal_atual
+
+    // Insira seu comentário
+    SE sal_atual <= 500 ENTAO
+        sal_reaj = sal_atual * 1.2
+
+    // Insira seu comentário
+    SENAO
+        sal_reaj = sal_atual * 1.1
+
+    FIM_SE
+
+    // Insira seu comentário
+    ESCREVA "O novo salário é R$", sal_reaj
+
 FIM
 ```
 
@@ -123,21 +153,43 @@ J --> L
 ```java
 ALGORTIMO SituacaoAluno
 DECLARE nota1, nota2, media: REAL
+
 INICIO
-  ESCREVA "Digite a nota 1:"
-  LEIA nota1
-  ESCREVA "Digite a nota 2:"
-  LEIA nota2
-  SE nota1 >= 0 E nota2 >= 0 ENTAO  // condição para que as notas sejam maiores que zero
-    media =  (nota1 + nota2)/2
-    SE media >= 7 ENTAO
-      ESCREVA "O aluno está aprovado!"
+
+    // Insira seu comentário
+    ESCREVA "Digite a nota 1:"
+
+    // Insira seu comentário
+    LEIA nota1
+
+    // Insira seu comentário
+    ESCREVA "Digite a nota 2:"
+
+    // Insira seu comentário
+    LEIA nota2
+
+    // Insira seu comentário
+    SE nota1 >= 0 E nota2 >= 0 ENTAO
+
+        // Insira seu comentário
+        media =  (nota1 + nota2)/2
+
+        // Insira seu comentário
+        SE media >= 7 ENTAO
+            ESCREVA "O aluno está aprovado!"
+
+        // Insira seu comentário
+        SENAO
+            "O aluno está reprovado!"
+
+        FIM_SE
+
+    // Insira seu comentário
     SENAO
-      "O aluno está reprovado!"
+        ESCREVA "A nota deve ser maior que zero!"
+
     FIM_SE
-  SENAO
-    ESCREVA "A nota deve ser maior que zero!"
-  FIM_SE
+
 FIM
 ```
 
@@ -176,19 +228,39 @@ J --> H
 ```java
 ALGORTIMO AptoCNH
 DECLARE idade, anos_apto: INTEIRO
+
 INICIO
-  ESCREVA ""Digite a sua idade:"
-  LEIA idade
-  SE idade < 0 ENTAO
-    ESCREVA "A idade deve ser maior que zero!"
-  SENAO
-    SE idade >= 18 ENTAO
-      ESCREVA "O candidato está apto a tirar a CNH!"
+
+    // Insira seu comentário
+    ESCREVA ""Digite a sua idade:"
+
+    // Insira seu comentário
+    LEIA idade
+
+    // Insira seu comentário
+    SE idade < 0 ENTAO
+        ESCREVA "A idade deve ser maior que zero!"
+
+    // Insira seu comentário
     SENAO
-      anos_apto <- 18 - idade
-      ESCREVA "Faltam", anos_apto, "ano(s) para o candidato estar apto!"
+
+        // Insira seu comentário
+        SE idade >= 18 ENTAO
+            ESCREVA "O candidato está apto a tirar a CNH!"
+
+        // Insira seu comentário
+        SENAO
+
+            // Insira seu comentário
+            anos_apto <- 18 - idade
+
+            // Insira seu comentário
+            ESCREVA "Faltam", anos_apto, "ano(s) para o candidato estar apto!"
+
+        FIM_SE
+
     FIM_SE
-  FIM_SE
+
 FIM
 ```
 
