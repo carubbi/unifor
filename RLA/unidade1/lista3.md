@@ -22,14 +22,22 @@ G --LOOP--> E
 ```java
 ALGORITMO print_n_primeiros
 DECLARE n, num: INTEIRO
+
 INICIO
-  ESCREVA “Digite um número: ”
-  LEIA n			// variável de entrada n
-  num ← 1			// variável num inicializada
-  ENQUANTO num <= n FAÇA	// n iterações
-    ESCREVA “Número ”, num
-    num ← num + 1		// num += 1 (incremento)
-  FIM_ENQUANTO
+
+	// Variável n como dado de entrada
+	ESCREVA “Digite um número: ”
+	LEIA n
+
+	// Variável num inicializada com valor de 1
+	num ← 1
+
+	// Loop condicional (loop while) que executa as instruções enquanto a condição "num <= n" for verdadeira
+	ENQUANTO num <= n FAÇA
+		ESCREVA “Número ”, num
+		num ← num + 1		// num += 1 (incremento de 1 a cada iteração)
+	FIM_ENQUANTO
+
 FIM
 ```
 
@@ -67,15 +75,23 @@ F --LOOP--> E
 ```java
 ALGORITMO	soma_n_numeros()
 DECLARE	n, i, soma: INTEIRO
+
 INICIO
-  ESCREVA “Digite a quantidade de números: ”
-  LEIA n    // variável de entrada n
-  soma ← 0    // variável soma inicializada
-  PARA i DE 1 ATÉ n PASSO 1 FAÇA
-    soma ← soma + i    // soma =+ i (incremento)
-  FIM_PARA
-  ESCREVA “A soma é igual a ”, soma
-10 FIM
+
+	// Variável n como dado de entrada
+	ESCREVA “Digite a quantidade de números: ”
+	LEIA n
+
+	// Variável soma inicializada com valor de 0
+	soma ← 0 
+
+	// Loop contado (loop for) executa as instruções a cada iteração dos valores de 'i' de 1 até n, incrementando 'i' em 1.
+	PARA i DE 1 ATÉ n PASSO 1 FAÇA
+		soma ← soma + i    // soma =+ i (incremento)
+	FIM_PARA
+	ESCREVA “A soma é igual a ”, soma
+
+FIM
 ```
 
 #### Tabela de testes
@@ -119,24 +135,36 @@ G --LOOP--> D
 
 ```java
 ALGORTIMO verifica_par_impar
-DECLARE numero, resto: INTEIRO
+DECLARE num, resto: INTEIRO
+
 INICIO
-  ESCREVA "Digite um número: "
-  LEIA numero
-  ENQUANTO num < 0 FAÇA
-    ESCREVA "Digite um número maior ou igual a zero:"
-    LEIA numero
-  FIM_ENQUANTO
-  SE numero >= 0 ENTAO                  // verifica se o inteiro é positivo
-    resto ← numero % 2                 // calcula o resto da divisão por 2
-    SE resto == 0 ENTAO                // verifica se o resto é igual a zero
-      ESCREVA "O número é par!"
-    SENAO
-      ESCREVA "O número é impar!"
-    FIM_SE
-  SENAO                                // caso inteiro for negativo (condição linha 5)
-    ESCREVA "O número deve ser postivo!"
-  FIM_SE
+
+	// Entrada do usuário de um número inteiro qualquer armezando na variável "num"
+	ESCREVA "Digite um número: "
+	LEIA num
+
+	// Loop condicional (loop while) executa as instruções enquanto a condição "num < 0" for verdadeira
+	ENQUANTO num < 0 FAÇA
+		ESCREVA "Digite um número maior ou igual a zero:"
+		LEIA num
+	FIM_ENQUANTO
+
+	// Executa as instruções sob a condição "num >= 0" for verdadeira
+	SE num >= 0 ENTAO
+		// Calcula o resto da divisão de "num" por 2
+		resto ← num % 2                 
+		// Executa a instrução se o resto é igual a zero
+		SE resto == 0 ENTAO
+			ESCREVA "O número é par!"
+		// Executa a instrução se o resto não for igual a zero
+		SENAO
+			ESCREVA "O número é impar!"
+		FIM_SE
+	// Executa a instrução se inteiro for negativo
+	SENAO                               
+		ESCREVA "O número deve ser postivo!"
+	FIM_SE
+
 FIM
 ```
 
@@ -168,12 +196,17 @@ F --LOOP--> E
 ```java
 ALGORTIMO MultiploTres
 DECLARE n: INTEIRO
+
 INICIO
-  ESCREVA "Digite a quantidade de números:"
-  LEIA n
-  PARA i DE 0 ATÉ n-1 PASSO 3 FAÇA
-    ESCREVA i
-  FIM_PARA
+
+	// Variável n como dado de entrada
+	ESCREVA "Digite a quantidade de números:"
+	LEIA n
+
+	//  Loop contado (loop for) executa as instruções a cada iteração dos valores de 'i' de 0 até n-1, incrementando 'i' em 3.
+	PARA i DE 0 ATÉ n-1 PASSO 3 FAÇA
+		ESCREVA i
+	FIM_PARA
 FIM
 ```
 
@@ -227,18 +260,28 @@ I --LOOP--> E
 ```java
 ALGORITMO SomaValores
 DECLARE n,i: INTEIRO; soma,num: REAL
+
 INICIO
+
+	// Dado de entrada armezenado na variável n
 	ESCREVA "Digite a quantidade de números:"
 	LEIA n
+
+	// Inicialização das variáveis "soma" em zero e "i" em um
 	soma <- 0
 	i <- 1
+
+	// Loop condicional (loop while) executa as instruções enquanto a condição "i <= n" for verdadeira
 	ENQUANTO i <= n FAÇA
 		ESCREVA "Digite o número", i,":"
 		LEIA num
 		soma <- soma + num
 		i <- i + 1
 	FIM_ENQUANTO
+
+	// Exibe a mensagem concatenando aos caracteres "A soma dos número é" com a variável "soma".
 	ESCREVA "A soma dos número é", soma
+
 FIM
 ```
 
@@ -284,20 +327,29 @@ ALGORTIMO QuantMedia
 DECLARE nota, soma, media: REAL; cont: INTEIRO
 
 INICIO
-	nota <- LEIA("Digite a nota do aluno (nota negativa finaliza): ")
+	
+	// Entrada do usuário da primeira nota
+	ESCREVA "Digite a nota do aluno (nota negativa finaliza): "
+	LEIA nota
+	
+	// Inicialização das variáveis soma e cont
 	soma <- 0
 	cont <- 0
 	
+	// Loop condicional para execucar as instruções até que a nota seja negativa
 	ENQUANTO nota >= 0 FAÇA
 		soma <- soma + nota
 		cont <- cont + 1
-		nota <- LEIA("Digite a nota do aluno (nota negativa finaliza): ")
+		ESCREVA "Digite a nota do aluno (nota negativa finaliza): "
+		LEIA nota
 	FIM_ENQUANTO
-	
+
+	// Condição para exibir a contagem e média das notas se a variável cont for maior que zero.
 	SE cont > 0 ENTÃO
 		media <- soma / cont
 		ESCREVA "Foram lidas", cont, "nota(s). A média aritmética é", media
 	FIM_SE
+
 FIM
 ```
 
