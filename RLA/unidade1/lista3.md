@@ -228,17 +228,17 @@ I --LOOP--> E
 ALGORITMO SomaValores
 DECLARE n,i: INTEIRO; soma,num: REAL
 INICIO
-  ESCREVA "Digite a quantidade de números:"
-  LEIA n
-  soma <- 0
-  i <- 1
-  ENQUANTO i <= n FAÇA
-    ESCREVA "Digite o número", i,":"
-    LEIA num
-    soma <- soma + num
-    i <- i + 1
-  FIM_ENQUANTO
-  ESCREVA "A soma dos número é", soma
+	ESCREVA "Digite a quantidade de números:"
+	LEIA n
+	soma <- 0
+	i <- 1
+	ENQUANTO i <= n FAÇA
+		ESCREVA "Digite o número", i,":"
+		LEIA num
+		soma <- soma + num
+		i <- i + 1
+	FIM_ENQUANTO
+	ESCREVA "A soma dos número é", soma
 FIM
 ```
 
@@ -262,39 +262,42 @@ Ex. Foram lidas 14 notas. A média aritmética é 6.75!
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([soma = 0])
-B --> C[quant = 0]
-C --> D[nota = 0]
+A([INICIO]) --> B[/soma/]
+B --> C[/cont/]
+C --> D{{"Digite a nota do aluno (nota negativa finaliza): "}}
 D --> E{nota >= 0}
-E --FALSE--> F{quant > 0}
-F --FALSE--> M([FIM])
-F --TRUE--> K[media = soma / quant]
-K --> L{{Foram lidas, quant, notas. <br>A média aritmética é, media!}}
-L --> M
-E --TRUE--> G{{"Digite a nota do aluno <br>(nota negativa encerra o algortimo): "}}
-G --> H[/nota/]
-H --> I[soma += nota]
-I --> J[quant += 1]
-J --LOOP--> E
+E --FALSE--> F{cont > 0}
+F --FALSE--> Z([FIM]) 
+F --TRUE--> G[media = soma / cont]
+G --> H{{Foram lidas, cont, notas. A média aritmética é, media!}}
+H --> Z
+E --TRUE--> I[soma += nota]
+I --> J[cont += 1]
+J --> K{{"Digite a nota do aluno (nota negativa finaliza): "}}
+K --LOOP-->  E
 ```
 
 #### Pseudocódigo
 
 ```java
 ALGORTIMO QuantMedia
-DECLARE quant: INT; soma, nota, media: REAL
+DECLARE nota, soma, contador: REAL
+
 INICIO
-  soma <- 0
-  quant <- 0
-  nota <- 0
-  ENQUANTO nota >= 0 FAÇA
-    ESCREVA "Digite a nota do aluno (nota negativa encerra o algortimo:"
-    LEIA nota
-    soma <- soma + nota
-    quant <- quant + 1
-    SE quant > 0 ENTAO
-      media <- soma / quant
-  ESCREVA "Foram lidas", quant, "notas. A média aritmética é", media, "!"
+	nota <- LEIA("Digite a nota do aluno (nota negativa finaliza): ")
+	soma <- 0
+	cont <- 0
+	
+	ENQUANTO nota >= 0 FAÇA
+		soma <- soma + nota
+		cont <- cont + 1
+		nota <- LEIA("Digite a nota do aluno (nota negativa finaliza): ")
+	FIM_ENQUANTO
+	
+	SE cont > 0 ENTÃO
+		media <- soma / cont
+		ESCREVA "Foram lidas", cont, "notas. A média aritmética é", media
+	FIM_SE
 FIM
 ```
 
