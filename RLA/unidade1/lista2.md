@@ -25,17 +25,32 @@ J --> I
 ```java
 ALGORITMO calReajuste
 DECLARE  sal, sal_reaj: real, prof: caractere
+
 INICIO
-  LEIA sal, prof
-  ESCOLHA
-    CASO prof == “Técnico”		// caso 1
-      sal_reaj ← 1.5 * sal
-    CASO prof = “Gerente”		// caso 2
-      sal_reaj ← 1.3 * sal
+
+    // Insira seu comentário
+    LEIA sal, prof
+
+    // Insira seu comentário
+    ESCOLHA
+
+        // Insira seu comentário
+        CASO prof == “Técnico”		
+            sal_reaj ← 1.5 * sal
+
+        // Insira seu comentário
+        CASO prof = “Gerente”		
+            sal_reaj ← 1.3 * sal
+
+    // Insira seu comentário
     SENÃO
-      sal_reaj ← 1.1 * sal
-  FIM_ESCOLHA
-  ESCREVA “Salário Reajustado = “, sal_reaj
+        sal_reaj ← 1.1 * sal
+
+    FIM_ESCOLHA
+
+    // Insira seu comentário
+    ESCREVA “Salário Reajustado = “, sal_reaj
+
 FIM
 ```
 
@@ -73,17 +88,37 @@ K --> L([FIM])
 ```java
 ALGORTIMO Media
 DECLARE num1, num2, num3, num4: REAL
+
 INICIO
-  ESCREVA "Digite o número 1:"
-  LEIA num1
-  ESCREVA "Digite o número 2:"
-  LEIA num2
-  ESCREVA "Digite o número 3:"
-  LEIA num3
-  ESCREVA "Digite o número 4:"
-  LEIA num4
-  media <- (num1 + num2 + num3 + num4)/4
-  ESCREVA "A média é", media
+
+    // Insira seu comentário
+    ESCREVA "Digite o número 1:"
+
+    // Insira seu comentário
+    LEIA num1
+
+    // Insira seu comentário
+    ESCREVA "Digite o número 2:"
+
+    // Insira seu comentário
+    LEIA num2
+
+    // Insira seu comentário
+    ESCREVA "Digite o número 3:"
+
+    // Insira seu comentário
+    LEIA num3
+
+    // Insira seu comentário
+    ESCREVA "Digite o número 4:"
+
+    // Insira seu comentário
+    LEIA num4
+
+    // Insira seu comentário
+    media <- (num1 + num2 + num3 + num4)/4
+    ESCREVA "A média é", media
+
 FIM
 ```
 
@@ -112,11 +147,21 @@ E --> F([FIM])
 ```java
 ALGORTIMO ConverteCelsiusFarenheit
 DECLARE C, F: REAL
+
 INICIO
-  ESCREVA "Digite a temperatura em Celisus:"
-  LEIA C
-  F <- (9/5) * C + 32
-  ESCREVA "A temperatura em Fahrenheit é", F, "graus"
+
+    // Insira seu comentário
+    ESCREVA "Digite a temperatura em Celisus:"
+
+    // Insira seu comentário
+    LEIA C
+
+    // Insira seu comentário
+    F <- (9/5) * C + 32
+
+    // Insira seu comentário
+    ESCREVA "A temperatura em Fahrenheit é", F, "graus"
+
 FIM
 ```
 
@@ -169,34 +214,80 @@ V --> R
 ```java
 ALGORITMO CalculadoraSimples
 DECLARE op: INTEIRO; num1,num2,res: REAL
+
 INICIO
-  ESCREVA "Operações válidas: 1(soma), 2(subtração), 3(multiplicação) e 4(divisão)"
-  ESCREVA "Digite uma operação:"
-  LEIA op
-  ESCREVA "Digite um número:"
-  LEIA num1
-  ESCREVA "Digite outro número:"
-  LEIA num2
-  ESCOLHA
-    CASO op == 1
-      res = num1 + num2
-      ESCREVA num1, "+", num2, "=", res
-    CASO op == 2
-      res = num1 - num2
-      ESCREVA num1, "-", num2, "=", res
-    CASO op == 3
-      res = num1 * num2
-      ESCREVA num1, "*", num2, "=", res
-    CASO op == 4
-      SE num2 != 0 ENTAO
-        res = num1 / num2
-        ESCREVA num1, "/", num2, "=", res
-      SENAO
-        ESCREVA "Impossível dividir!"
-      FIM_SE
-  SENAO
-    ESCREVA "Operação inválida!"
-  FIM_ESCOLHA
+
+    // Insira seu comentário
+    ESCREVA "Operações válidas: 1(soma), 2(subtração), 3(multiplicação) e 4(divisão)"
+
+    // Insira seu comentário
+    ESCREVA "Digite uma operação:"
+
+    // Insira seu comentário
+    LEIA op
+
+    // Insira seu comentário
+    ESCREVA "Digite um número:"
+    LEIA num1
+
+    // Insira seu comentário
+    ESCREVA "Digite outro número:"
+    LEIA num2
+
+    // Insira seu comentário
+    ESCOLHA
+
+        // Insira seu comentário
+        CASO op == 1
+
+            // Insira seu comentário
+            res = num1 + num2
+
+            // Insira seu comentário
+            ESCREVA num1, "+", num2, "=", res
+
+        // Insira seu comentário
+        CASO op == 2
+
+            // Insira seu comentário
+            res = num1 - num2
+
+            // Insira seu comentário
+            ESCREVA num1, "-", num2, "=", res
+
+        // Insira seu comentário
+        CASO op == 3
+
+            // Insira seu comentário
+            res = num1 * num2
+
+            // Insira seu comentário
+            ESCREVA num1, "*", num2, "=", res
+
+        // Insira seu comentário
+        CASO op == 4
+
+            // Insira seu comentário
+            SE num2 != 0 ENTAO
+
+                // Insira seu comentário
+                res = num1 / num2
+
+                // Insira seu comentário
+                ESCREVA num1, "/", num2, "=", res
+
+            // Insira seu comentário
+            SENAO
+                ESCREVA "Impossível dividir!"
+
+            FIM_SE
+
+    // Insira seu comentário
+    SENAO
+        ESCREVA "Operação inválida!"
+
+    FIM_ESCOLHA
+
 FIM
 ```
 
@@ -227,10 +318,12 @@ G --FALSE--> H{idade >=14 <br>E <br>idade <= 17}
 H --FALSE--> I{idade >=18}
 I --FALSE--> P{{"Digite uma idade válida!"}}
 P --> Z([FIM])
-F --TRUE--> K{{"Infantial A"}}
-G --TRUE--> L{{Infantial B}}
-H --TRUE--> M{{Infantial C}}
+D --TRUE--> Q{{Infantial A}}
+F --TRUE--> K{{"Infantial B"}}
+G --TRUE--> L{{Juvenil A}}
+H --TRUE--> M{{Juvenil B}}
 I --TRUE--> N{{Adulto}}
+Q --> Z
 K --> Z
 L --> Z
 M --> Z
@@ -242,21 +335,56 @@ N --> Z
 ```
 ALGORTIMO ClassificaCategoria
 DECLARE idade: INTEIRO
+
 INICIO
-  ESCREVA "Digite a idade do aluno:"
-  LEIA idade
-  ESCOLHA 
-    CASO idade >=8 E idade <= 10
-      ESCREVA "Infantial A"
-    CASO idade >=11 E idade <= 13
-      ESCREVA "Infantial B"
-    CASO idade >=14 E idade <= 17
-      ESCREVA "Infantial C"
-    CASO idade >=18
-      ESCREVA "Adulto"
-  SENAO
-    ESCREVA "Digite uma idade válida!"
-  FIM_ESCOLHA
+
+    // Insira seu comentário
+    ESCREVA "Digite a idade do aluno:"
+
+    // Insira seu comentário
+    LEIA idade
+
+    // Insira seu comentário
+    ESCOLHA
+
+        // Insira seu comentário
+        CASO idade >=5 E idade <= 7
+
+            // Insira seu comentário
+            ESCREVA "Infantial A"
+
+        // Insira seu comentário
+        CASO idade >=8 E idade <= 10
+
+            // Insira seu comentário
+            ESCREVA "Infantial B"
+
+        // Insira seu comentário
+        CASO idade >=11 E idade <= 13
+
+            // Insira seu comentário
+            ESCREVA "Juvenil A"
+
+        // Insira seu comentário
+        CASO idade >=14 E idade <= 17
+
+            // Insira seu comentário
+            ESCREVA "Juvenil B"
+
+        // Insira seu comentário
+        CASO idade >=18
+
+            // Insira seu comentário
+            ESCREVA "Adulto"
+
+    // Insira seu comentário
+    SENAO
+
+        // Insira seu comentário
+        ESCREVA "Digite uma idade válida!"
+
+    FIM_ESCOLHA
+
 FIM
 ```
 
