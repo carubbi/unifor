@@ -81,10 +81,14 @@ INICIO
 
     // Insira seu comentário
     ESCREVA "Digite o valor da a:"
+
+    // Insira seu comentário
     LEIA a
 
     // Insira seu comentário
     ESCREVA "Digite o valor da b:"
+
+    // Insira seu comentário
     LEIA b
 
     // Insira seu comentário
@@ -173,6 +177,8 @@ INICIO
 
     // Insira seu comentário
     ESCREVA "Digite a quantidade de notas dos alunos:"
+
+    // Insira seu comentário
     LEIA n
 
     // Insira seu comentário
@@ -183,6 +189,8 @@ INICIO
 
         // Insira seu comentário
         ESCREVA "Digite a nota do aluno", i, ":"
+
+        // Insira seu comentário
         LEIA nota
 
         // Insira seu comentário
@@ -281,6 +289,8 @@ INICIO
 
             // Insira seu comentário
             ESCREVA "Digite um número:"
+
+            // Insira seu comentário
             LEIA num 
 
             // Insira seu comentário
@@ -358,6 +368,8 @@ INICIO
 
     // Insira seu comentário
     ESCREVA "Digite o número de termos da série S:"
+
+    // Insira seu comentário
     LEIA n
 
     // Insira seu comentário
@@ -435,6 +447,8 @@ INICIO
 
     // Insira seu comentário
     ESCREVA "Digite um numero inteiro nao-negativo:"
+
+    // Insira seu comentário
     LEIA n
 
     // Insira seu comentário
@@ -512,10 +526,14 @@ INICIO
 
     // Insira seu comentário
     ESCREVA "Número de termos da série Fibonacci:"
+
+    // Insira seu comentário
     LEIA n
 
     // Insira seu comentário
     a <- 0
+
+    // Insira seu comentário
     b <- 1
 
     // Insira seu comentário
