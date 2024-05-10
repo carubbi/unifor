@@ -1,0 +1,11 @@
+def verifica_par_impar():
+    numero = int(input("Digite um número: "))
+
+    if numero >= 0:
+        resto = numero % 2
+        if resto == 0:
+            print("O número é par!")
+        else:
+            print("O número é ímpar!")
+    else:
+        print("O número deve ser positivo!")
