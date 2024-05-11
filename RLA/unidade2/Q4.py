@@ -1,6 +1,6 @@
 # Questão 4 - Cálculo de uma série
 # Dado um conjunto de $n$ termos da série, implemente e teste um algoritmo para calcular o valor de S, conforme definido abaixo:
-# $$ S = \frac{1}{2} + \frac{3}{4} + \frac{5}{6} + \frac{7}{8} + \dots $$
+# S = 1/2 + 3/4 + 5/6 + 7/8 + ...
 
 def soma_serie(n: int) -> float:
     """
