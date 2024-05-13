@@ -1,4 +1,4 @@
-# Questão 7 - Inversão dos dígitos de um número inteiro (2 pontos)
+# Questão 7 - Inversão dos dígitos de um número inteiro
 # Implemente e teste um algoritmo para inverter a ordem dos dígitos de um número inteiro positivo.<br> **Obrigatório uso da estrutura composta `try except`**.
 
 def inverte_inteiro(num: int) -> None:

@@ -1,4 +1,4 @@
-# Questão 2 (1 ponto)
+# Questão 2
 # Implemente em Python, um algoritmo para calcular o novo salário de um funcionário. 
 # Sabe-se que os funcionários que recebem atualmente salário de até R$ 500 terão aumento de 20%; 
 # os demais terão aumento de 10%.

@@ -1,4 +1,6 @@
 """
+Questão 01
+
 O rendimento acadêmico da UNIFOR é acompanhado por meio de três registros de Avaliação (AV1, AV2 e AV3), 
 resultantes da consolidação do desempenho nas atividades avaliativas aplicadas em cada período e aferido por Nota Final (NF) 
 correspondente à média aritmética entre a nota resultante da média de AV1 e AV2 e a nota de AV3, atribuídas numa escala de 0,0 a 10,0, 

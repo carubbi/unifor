@@ -1,4 +1,4 @@
-# Questão 1 (1 ponto)
+# Questão 1
 # Implemente em Python, um algoritmo para determinar se um número inteiro e positivo é par ou impar.
 
 def verifica_par_impar():

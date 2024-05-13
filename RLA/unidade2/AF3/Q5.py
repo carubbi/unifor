@@ -1,4 +1,4 @@
-# Questão 5 - Cálculo fatorial
+# Questão 5
 # Dado um número n, implemente e teste um algoritmo para calcular o fatorial de n (escrito como n!), onde n ≥ 0.
 # Obrigatório uso da estrutura composta try / except.
 

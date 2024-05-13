@@ -1,4 +1,4 @@
-# Questão 3 (1 ponto)
+# Questão 3
 # Implemente em Python, um algoritmo para calcular a média aritmética entre duas notas 
 # de um aluno e mostrar sua situação, que pode ser aprovado ou reprovado.
 

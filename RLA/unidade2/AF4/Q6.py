@@ -1,4 +1,4 @@
-# Questão 6 - Geração da sequência de Fibonacci (2 pontos)
+# Questão 6 - Geração da sequência de Fibonacci
 # Gerar e imprimir os $n$ primeiros termos da sequência de Fibonacci, onde $n ≥ 1$. <br>
 # Os primeiros termos são: $0, 1, 1, 2, 3, 5, 8, 13, \dots$. Cada termo, além dos dois primeiros, é derivado da soma dos seus dois antecessores mais próximos.
 

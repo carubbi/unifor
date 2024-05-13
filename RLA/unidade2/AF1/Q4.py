@@ -1,4 +1,4 @@
-# Questão 4 (1 ponto)
+# Questão 4
 # Implemente em Python, um algoritmo que, a partir da idade do candidato(a), 
 # determinar se pode ou não tirar a CNH. Caso não atender a restrição de idade, 
 # calcular quantos anos faltam para o candidato estar apto.
