@@ -2,7 +2,15 @@
 Questão 01
 Desenvolva um programa para um jogo de adivinhação. O programa deve gerar aleatoriamente um número inteiro entre um valor mínimo e máximo definidos pelo usuário. 
 O jogador terá um número limitado de tentativas para adivinhar o número gerado pelo programa. Após cada tentativa do jogador, o programa deve informar se o número 
-número fornecido pelo jogador está perto ou distante do número aleatório, baseado nas condições: muito frio (dif<2), frio, quente e muito quente. O jogo continuará até que o jogador adivinhe corretamente o número aleatório ou esgote todas as tentativas.
+número fornecido pelo jogador está perto ou distante do número aleatório. Conforme a diferença absoluta entre numero secreto e o chute:
+
+- se for zero, imprima "Parabéns! Você acertou o número numero_secreto!"
+- se for menor que 2, imprima "Muito quente!"
+- se for menor que 4, imprima "Quente!"
+- se for menor que 6, imprima "Frio!"
+- se não for nenhuma das condições acima, imprima "Muito frio!"
+
+O jogo continuará até que o jogador adivinhe corretamente o número aleatório ou esgote todas as tentativas.
 """
 from random import randint
 
