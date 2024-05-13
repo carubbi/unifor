@@ -1,6 +1,8 @@
 """
 Questão 01
-Desenvolva um programa para um jogo de adivinhação. O programa deve gerar aleatoriamente um número inteiro entre um valor mínimo e máximo definidos pelo usuário. O jogador terá um número limitado de tentativas para adivinhar o número gerado pelo programa. Após cada tentativa do jogador, o programa deve informar se o número número fornecido pelo jogador é maior ou menor ao número aleatório. O jogo continuará até que o jogador adivinhe corretamente o número aleatório ou esgote todas as tentativas.
+Desenvolva um programa para um jogo de adivinhação. O programa deve gerar aleatoriamente um número inteiro entre um valor mínimo e máximo definidos pelo usuário. 
+O jogador terá um número limitado de tentativas para adivinhar o número gerado pelo programa. Após cada tentativa do jogador, o programa deve informar se o número 
+número fornecido pelo jogador é maior ou menor ao número aleatório. O jogo continuará até que o jogador adivinhe corretamente o número aleatório ou esgote todas as tentativas.
 """
 from random import randint
 
