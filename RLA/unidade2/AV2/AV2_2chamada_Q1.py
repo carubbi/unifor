@@ -1,3 +1,40 @@
+"""
+Questão 01 (4 pontos)
+
+O rendimento acadêmico da UNIFOR é acompanhado por meio de três registros de Avaliação (AV1, AV2 e AV3), resultantes da consolidação do desempenho nas atividades avaliativas 
+aplicadas em cada período e aferido por Nota Final (NF) correspondente à média aritmética entre a nota resultante da média de AV1 e AV2 e a nota de AV3, atribuídas numa escala 
+de 0,0 a 10,0, conforme a seguinte fórmula:
+
+$$NF = [(AV1 + AV2)/2 + AV3]/2$$
+
+Estará aprovado por rendimento acadêmico, o aluno que obtiver Nota Final ($NF$) igual ou superior a $5,0$ (cinco vírgula zero), desde que a nota resultante da média entre 
+$AV1$ e $AV2$ seja igual ou superior a $4,0$ (quatro vírgula zero) e a nota de $AV3$ seja igual ou superior a $4,0$ (quatro vírgula zero).
+
+Entradas obrigatórias:
+
+AV1: 8.5, AV2: 7.0, AV3: 9.0 (entrada solicitada)
+AV1: 2.5, AV2: 5.5, AV3: 5.0 (entrada solicitada)
+AV1: 9.5, AV2: 8.5, AV3: 3.0 (entrada solicitada)
+AV1: 1.0, AV2: 6.0 (não solicita a nota da AV3)
+
+Saídas esperadas:
+
+Digite a nota da AV3: nove
+Digite um valor válido!
+
+Digite a nota da AV3: 9
+Nota: 8.4 Aprovado!
+
+Digite a nota da AV3: 5
+Nota: 4.5 Reprovado
+
+Digite a nota da AV3: 3
+Nota: 6.0 Reprovado
+
+Nota da AV3 não informada!
+Nota 3.5 Reprovado
+"""
+
 def calcular_nota_final(av1, av2, av3):
     """
     Calcula a nota final de acordo com as av1, av2 e av3.
