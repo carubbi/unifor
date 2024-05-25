@@ -12,3 +12,6 @@ def reajuste_salario():
         sal_reaj = sal_atual * 1.1
 
     print(f"O novo salário é R$ {sal_reaj:.2f}")
+
+if __name__ == "__main__":
+    reajuste_salario()
