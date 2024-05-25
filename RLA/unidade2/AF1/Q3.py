@@ -14,3 +14,6 @@ def situacao_aluno():
             print("O aluno está reprovado!")
     else:
         print("A nota deve ser maior que zero!")
+
+if __name__ == "__main__":
+    situacao_aluno()
