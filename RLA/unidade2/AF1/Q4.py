@@ -14,3 +14,6 @@ def verificar_apto_cnh():
         else:
             anos_apto = 18 - idade
             print(f"Faltam {anos_apto} ano(s) para o candidato estar apto!")
+
+if __name__ == "__main__":
+    verificar_apto_cnh()
