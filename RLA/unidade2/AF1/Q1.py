@@ -12,3 +12,7 @@ def verifica_par_impar():
             print("O número é ímpar!")
     else:
         print("O número deve ser positivo!")
+
+
+if __name__ == "__main__":
+    calcular_media()
