@@ -13,6 +13,5 @@ def verifica_par_impar():
     else:
         print("O número deve ser positivo!")
 
-
 if __name__ == "__main__":
     verifica_par_impar()
