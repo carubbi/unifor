@@ -13,9 +13,5 @@ def verifica_par_impar():
     else:
         print("O número deve ser positivo!")
 
-def main() -> None:
-    n: int = 5
-    calc_fatorial(n)
-
 if __name__ == "__main__":
     verifica_par_impar()
