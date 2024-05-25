@@ -15,4 +15,4 @@ def verifica_par_impar():
 
 
 if __name__ == "__main__":
-    calcular_media()
+    verifica_par_impar()
